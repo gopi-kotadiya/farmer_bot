@@ -26,6 +26,38 @@ class ChatBot:
             conn.close()
         except Exception: pass
 
+    def get_recent_history(self, session_id: str, limit: int = 8) -> str:
+        if not session_id:
+            return ""
+        try:
+            conn = get_connection()
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT role, content
+                FROM conversation_history
+                WHERE session_id = ?
+                ORDER BY id DESC
+                LIMIT ?
+                """,
+                (session_id, limit)
+            )
+            rows = cursor.fetchall()
+            conn.close()
+            if not rows:
+                return ""
+
+            # Keep chronological order for prompt clarity
+            rows = list(reversed(rows))
+            history_lines = []
+            for row in rows:
+                role = row["role"] if "role" in row.keys() else row[0]
+                content = row["content"] if "content" in row.keys() else row[1]
+                history_lines.append(f"{role}: {content}")
+            return "\n".join(history_lines)
+        except Exception:
+            return ""
+
     async def chat(self, user_input: str, session_id: str = "") -> str:
         try:
             self.save_to_db(session_id, "user", user_input)
@@ -33,10 +65,57 @@ class ChatBot:
             # --- CONTEXT ---
             get_tool = next((t for t in self.tools if t.name == "get_farmer_profile"), None)
             profile_context = get_tool.function(session_id=session_id) if get_tool else ""
+            recent_history = self.get_recent_history(session_id=session_id, limit=8)
 
             # --- INTENT ---
-            intent_prompt = f"Identify: 'WEATHER_QUERY', 'MANDI_QUERY', 'SCHEME_QUERY', 'GENERAL_CHAT'. Request: '{user_input}'. Reply ONLY one word."
+            intent_prompt = (
+                "Classify the request into exactly one label:\n"
+                "1) WEATHER_QUERY\n"
+                "2) MANDI_QUERY\n"
+                "3) SCHEME_QUERY\n"
+                "4) RECALL_QUERY (when user asks about previous messages/context like 'maine kya pucha tha', 'kis city ka', 'mera naam kya hai')\n"
+                "5) GENERAL_CHAT\n\n"
+                f"Recent Session History:\n{recent_history}\n\n"
+                f"Request: '{user_input}'\n"
+                "Reply ONLY one label."
+            )
             intent = self.llm.chat([{"role": "user", "content": intent_prompt}]).strip().upper()
+
+            # --- RECALL ---
+            if "RECALL" in intent:
+                recall_res = self.llm.chat([
+                    {
+                        "role": "system",
+                        "content": (
+                            "Tum KisanBot ho. Sirf diye gaye recent session history aur profile context "
+                            "ke base par jawab do. Agar info missing ho to clearly bolo."
+                        )
+                    },
+                    {
+                        "role": "user",
+                        "content": (
+                            f"Profile Context:\n{profile_context}\n\n"
+                            f"Recent Session History:\n{recent_history}\n\n"
+                            f"Question:\n{user_input}"
+                        )
+                    }
+                ])
+                self.save_to_db(session_id, "assistant", recall_res)
+                return recall_res
+
+            # --- WEATHER ---
+            if "WEATHER" in intent:
+                extract_prompt = f"Extract only city name from: '{user_input}'. If city missing, return 'Surat'."
+                city = self.llm.chat([{"role": "user", "content": extract_prompt}]).strip().replace('"', "")
+                weather_tool = next((t for t in self.tools if t.name == "get_live_weather"), None)
+                if weather_tool:
+                    tool_res = weather_tool.function(city=city, session_id=session_id)
+                    final_res = self.llm.chat([
+                        {"role": "system", "content": "Hindi me seedha concise answer do. Greeting (jaise Namaste) mat likho. Sirf useful weather details do."},
+                        {"role": "user", "content": f"Weather Data: {tool_res}"}
+                    ])
+                    self.save_to_db(session_id, "assistant", final_res)
+                    return final_res
 
             # --- MANDI ---
             if "MANDI" in intent:
@@ -47,30 +126,41 @@ class ChatBot:
 
                 mandi_tool = next((t for t in self.tools if t.name == "get_mandi_prices"), None)
                 if mandi_tool:
-                    print(f"[DEBUG] -> Searching {data.get('commodity')}...", flush=True)
+                    print(
+                        f"[TOOL INPUT] session={session_id} tool=get_mandi_prices commodity={data.get('commodity')} state={data.get('state')} district={data.get('district')}",
+                        flush=True
+                    )
                     tool_res = mandi_tool.function(commodity=data.get("commodity"), state=data.get("state"), district=data.get("district"), session_id=session_id)
-                    
-                    # FIXED PROMPT: Provide rates, not definitions!
-                    final_res = self.llm.chat([
-                        {"role": "system", "content": "Tell the mandi rates from the provided data in Hindi. Do not define words. Just give prices and markets."},
-                        {"role": "user", "content": f"Mandi Data: {tool_res}"}
-                    ])
-                    self.save_to_db(session_id, "assistant", final_res)
-                    return final_res
+                    # Return tool output directly so 100kg and 20kg values are always preserved
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
 
             # --- SCHEMES ---
             if "SCHEME" in intent:
                 sc_tool = next((t for t in self.tools if t.name == "get_govt_schemes"), None)
                 if sc_tool:
-                    tool_res = sc_tool.function(session_id=session_id)
-                    res = self.llm.chat([{"role": "system", "content": "List the schemes briefly in Hindi."}, {"role": "user", "content": tool_res}])
-                    self.save_to_db(session_id, "assistant", res)
-                    return res
+                    print(f"[TOOL INPUT] session={session_id} tool=get_govt_schemes query={user_input}", flush=True)
+                    tool_res = sc_tool.function(search_query=user_input, session_id=session_id)
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
 
             # --- GENERAL ---
             response = self.llm.chat([
-                {"role": "system", "content": "You are KisanBot. Help farmer."},
-                {"role": "user", "content": f"Context: {profile_context}\nQuestion: {user_input}"}
+                {
+                    "role": "system",
+                    "content": (
+                        "You are KisanBot. Help farmer in Hindi/Hinglish. "
+                        "Use past session history when user asks follow-up questions."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": (
+                        f"Profile Context:\n{profile_context}\n\n"
+                        f"Recent Session History:\n{recent_history}\n\n"
+                        f"Current Question:\n{user_input}"
+                    )
+                }
             ])
             self.save_to_db(session_id, "assistant", response)
             return response

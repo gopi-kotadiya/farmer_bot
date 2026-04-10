@@ -4,6 +4,9 @@ from src.utils.logger import logger
 import json
 
 router = APIRouter(prefix="/v1/kisan")
+USER_COLOR = "\033[96m"
+ASSISTANT_COLOR = "\033[95m"
+RESET_COLOR = "\033[0m"
 
 @router.post("/chat")
 async def chat(message: str = Body(..., embed=True), session_id: str = Body(None, embed=True)):
@@ -21,21 +24,20 @@ async def websocket_endpoint(websocket: WebSocket, session_id: str):
         while True:
             # Receive message from client
             data = await websocket.receive_text()
-            user_msg = json.loads(data).get("message")
+            user_msg = json.loads(data).get("message", "")
+            print(f"{USER_COLOR}[USER] {session_id} User Message: {user_msg}{RESET_COLOR}", flush=True)
             
             # Get response from AI
             response = await kisan_bot.chat(user_msg, session_id=session_id)
+            print(f"{ASSISTANT_COLOR}[ASSISTANT] {session_id} Assistant: {response}{RESET_COLOR}", flush=True)
             
             # Send response back
-            print(f"[WS DEBUG] -> Sending response to client...", flush=True)
             await websocket.send_text(json.dumps({
                 "response": response,
                 "session_id": session_id
             }))
-            print(f"[WS DEBUG] -> Response Sent Successfully.", flush=True)
             
     except WebSocketDisconnect:
         logger.info(f"🔌 WebSocket Disconnected", session_id=session_id)
     except Exception as e:
-        print(f"[WS ERROR] -> {e}", flush=True)
         logger.error(f"WebSocket Error: {e}", session_id=session_id)

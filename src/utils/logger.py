@@ -1,7 +1,6 @@
 import logging
 import colorlog
 import sys
-from datetime import datetime
 
 class AppLogger:
     def __init__(self, name="KisanBot"):
@@ -37,6 +36,16 @@ class AppLogger:
     def warning(self, msg, session_id=""):
         trace = f"{session_id} " if session_id else ""
         self.logger.warning(f"{trace}{msg}")
+
+    def user_message(self, msg, session_id=""):
+        trace = f"{session_id} " if session_id else ""
+        # Cyan label for user input visibility in terminal
+        self.logger.info(f"{trace}\033[96mUser Message:\033[0m {msg}")
+
+    def assistant_message(self, msg, session_id=""):
+        trace = f"{session_id} " if session_id else ""
+        # Magenta label for assistant response visibility in terminal
+        self.logger.info(f"{trace}\033[95mAssistant:\033[0m {msg}")
 
 # Global instance
 logger = AppLogger()

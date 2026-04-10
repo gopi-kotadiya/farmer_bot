@@ -2,7 +2,6 @@ import requests
 from datetime import datetime
 from RAW.models.tool import Tool, ToolParam
 from src.utils.globals import globals
-from src.utils.logger import logger
 
 def get_live_weather(city: str = "Surat", session_id=""):
     """Tool to get live weather data with timestamp verification."""
@@ -18,7 +17,10 @@ def get_live_weather(city: str = "Surat", session_id=""):
     }
     
     try:
+        print(f"[TOOL CALLED] session={session_id} tool=get_live_weather city={city}", flush=True)
+        print(f"[API REQUEST] OpenWeatherMap endpoint={url} city={city} key={short_key}", flush=True)
         res = requests.get(url, params=params)
+        print(f"[API RESPONSE] OpenWeatherMap status={res.status_code} city={city}", flush=True)
         if res.status_code == 200:
             d = res.json()
             temp = d['main']['temp']
@@ -31,12 +33,12 @@ def get_live_weather(city: str = "Surat", session_id=""):
             result = (f"{city} mein abhi taapman {temp}°C hai aur mausam '{desc}' hai. "
                       f"Humidity {humidity}% hai. [Data Updated at: {data_time}]")
             
-            print(f"\n[VERIFIED LIVE DATA] -> City: {city}, Temp: {temp}, Time: {data_time}")
-            print(f"[API SOURCE] -> OpenWeatherMap (Key: {short_key})\n")
+            print(f"[API DATA] source=OpenWeatherMap city={city} temp={temp} humidity={humidity} updated_at={data_time}", flush=True)
             
             return result
-        return f"Error: {res.status_code}"
+        return f"Weather API Error: {res.status_code}"
     except Exception as e:
+        print(f"[TOOL ERROR] session={session_id} tool=get_live_weather error={e}", flush=True)
         return str(e)
 
 weather_tool = Tool(
