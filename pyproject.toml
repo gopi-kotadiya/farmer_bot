@@ -1,0 +1,20 @@
+[project]
+name = "farmer-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "colorlog>=6.10.1",
+    "fastapi>=0.135.3",
+    "langchain>=1.2.15",
+    "langchain-community>=0.4.1",
+    "langchain-groq>=1.1.2",
+    "langchainhub>=0.1.21",
+    "python-dotenv>=1.2.2",
+    "python-telegram-bot>=22.7",
+    "requests>=2.33.1",
+    "uvicorn>=0.44.0",
+    "websocket>=0.2.1",
+    "websockets>=16.0",
+]

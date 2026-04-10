@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.db
+.agent/
+.gemini/
+node_modules/
+dist/
+build/
+.DS_Store
