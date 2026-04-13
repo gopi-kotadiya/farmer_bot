@@ -14,6 +14,7 @@ class Globals:
         
         # Default Models
         self.llm_model = "llama-3.3-70b-versatile"
+        self.vision_model = os.getenv("GROQ_VISION_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
         
         # Verify critical keys
         if not self.groq_api_key:
