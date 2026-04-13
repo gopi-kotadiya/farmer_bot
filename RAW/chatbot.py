@@ -60,6 +60,10 @@ class ChatBot:
 
     async def chat(self, user_input: str, session_id: str = "") -> str:
         try:
+            user_input = (user_input or "").strip()
+            if not user_input:
+                return "Kuch likho: mausam, mandi bhav ya scheme — Roman Hindi me (Devanagari mat)."
+
             self.save_to_db(session_id, "user", user_input)
             
             # --- CONTEXT ---
@@ -87,8 +91,9 @@ class ChatBot:
                     {
                         "role": "system",
                         "content": (
-                            "Tum KisanBot ho. Sirf diye gaye recent session history aur profile context "
-                            "ke base par jawab do. Agar info missing ho to clearly bolo."
+                            "Tum KisanBot ho. Sirf diye gaye recent session history aur profile context se jawab do. "
+                            "Hinglish me Roman script use karo (Devanagari bilkul nahi). "
+                            "Short jawab do (max 2 lines), greeting aur paragraph mat do."
                         )
                     },
                     {
@@ -105,13 +110,33 @@ class ChatBot:
 
             # --- WEATHER ---
             if "WEATHER" in intent:
-                extract_prompt = f"Extract only city name from: '{user_input}'. If city missing, return 'Surat'."
+                extract_prompt = (
+                    f"Extract only the city name for weather from: '{user_input}'. "
+                    "Use standard English spelling for place names. "
+                    "If no city is mentioned, reply exactly: NONE"
+                )
                 city = self.llm.chat([{"role": "user", "content": extract_prompt}]).strip().replace('"', "")
+                city = (city or "").strip()
+                if not city or city.upper() == "NONE":
+                    need_city = "Kaun se shehar ka mausam chahiye? City ka naam likho (Roman me)."
+                    self.save_to_db(session_id, "assistant", need_city)
+                    return need_city
                 weather_tool = next((t for t in self.tools if t.name == "get_live_weather"), None)
                 if weather_tool:
                     tool_res = weather_tool.function(city=city, session_id=session_id)
+                    if (
+                        "Weather API Error" in tool_res
+                        or "Connection" in tool_res
+                        or "timed out" in tool_res.lower()
+                    ):
+                        err_short = (
+                            f"Weather nahi mila — city ka naam sahi spelling me likho ya dobara try karo. "
+                            f"({tool_res})"
+                        )
+                        self.save_to_db(session_id, "assistant", err_short)
+                        return err_short
                     final_res = self.llm.chat([
-                        {"role": "system", "content": "Hindi me seedha concise answer do. Greeting (jaise Namaste) mat likho. Sirf useful weather details do."},
+                        {"role": "system", "content": "Hinglish me Roman script me short answer do (max 2 lines). Devanagari letters, greeting aur paragraph mat do."},
                         {"role": "user", "content": f"Weather Data: {tool_res}"}
                     ])
                     self.save_to_db(session_id, "assistant", final_res)
@@ -149,7 +174,7 @@ class ChatBot:
                 {
                     "role": "system",
                     "content": (
-                        "You are KisanBot. Help farmer in Hindi/Hinglish. "
+                        "You are KisanBot. Help farmer in short Hinglish (Roman script only, no Devanagari). "
                         "Use past session history when user asks follow-up questions."
                     )
                 },

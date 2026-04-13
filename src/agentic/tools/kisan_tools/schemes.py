@@ -47,7 +47,7 @@ def get_govt_schemes(search_query: str = "Agriculture", session_id=""):
     """Tool to fetch government schemes from data.gov.in (Live API mode)."""
     api_key = globals.data_gov_key
     if not api_key:
-        return "System error: Government Schemes API key missing."
+        return "System error: Government schemes API key missing hai."
 
     # Resource ID for Schemes (Example)
     # Note: In real setup, this would target a scheme-specific dataset
@@ -79,12 +79,12 @@ def get_govt_schemes(search_query: str = "Agriculture", session_id=""):
                         break
                 if api_hint:
                     return (
-                        "Maaf kijiye, live schemes API me records nahi mile. "
+                        "Live schemes API me records nahi mile. "
                         f"API message: {api_hint}"
                     )
                 return (
-                    "Maaf kijiye, live schemes API me records nahi mile. "
-                    "Lagta hai selected resource_id par API data available nahi hai."
+                    "Live schemes API me records nahi mile. "
+                    "Selected resource_id par API data available nahi lag raha."
                 )
 
             current_year = datetime.now().year
@@ -93,10 +93,10 @@ def get_govt_schemes(search_query: str = "Agriculture", session_id=""):
                 latest_year = _extract_latest_year(records)
                 if latest_year:
                     return (
-                        f"Maaf kijiye, {current_year} ki nayi schemes ka data abhi publish nahi hua. "
-                        f"Live API me latest available year {latest_year} hai."
+                        f"{current_year} ki new schemes ka data abhi publish nahi hua. "
+                        f"API me latest available year {latest_year} hai."
                     )
-                return f"Maaf kijiye, {current_year} ki nayi schemes ka data abhi live API me available nahi hai."
+                return f"{current_year} ki new schemes ka data abhi live API me available nahi hai."
 
             # Generic relevance scoring against whole record text
             query_terms = [t for t in re.split(r"\W+", str(search_query).lower()) if len(t) > 2]
@@ -118,7 +118,7 @@ def get_govt_schemes(search_query: str = "Agriculture", session_id=""):
                         return str(val).strip()
                 return default
 
-            output = f"Nayi Sarkari Yojnayein ({current_year}):\n"
+            output = f"Government Schemes ({current_year}):\n"
             for r in ranked_records[:3]:
                 title = pick_field(
                     r,
@@ -128,7 +128,7 @@ def get_govt_schemes(search_query: str = "Agriculture", session_id=""):
                 desc = pick_field(
                     r,
                     ["description", "details", "brief", "summary", "objective"],
-                    default="Details portal par uplabdh hain."
+                    default="Details official portal par available hain."
                 )
                 output += f"- {title}: {desc}\n"
             return output

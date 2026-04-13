@@ -20,11 +20,15 @@ class KisanAgent:
         try:
             # Simple Weather Check Logic (We can use full LangChain agents later)
             if any(word in query.lower() for word in ["weather", "mausam", "temperature", "taapman"]):
-                # Extract city using LLM
-                city_prompt = f"Extract only the city name from: '{query}'. If no city, return 'Surat'."
+                city_prompt = (
+                    f"Extract only the city name from: '{query}'. "
+                    "If no city is mentioned, reply exactly: NONE"
+                )
                 city = (await self.llm.ainvoke(city_prompt)).content.strip()
-                
-                response = get_weather(city, session_id=session_id)
+                if not city or city.upper() == "NONE":
+                    response = "Kaun se shehar ka mausam chahiye? City ka naam likho."
+                else:
+                    response = get_weather(city, session_id=session_id)
             else:
                 ai_res = await self.llm.ainvoke(query)
                 response = ai_res.content

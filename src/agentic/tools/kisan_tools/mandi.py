@@ -85,14 +85,14 @@ def get_mandi_prices(commodity: str = "Wheat", state: str = "Gujarat", district:
                             top_items = available[:12]
                             commodity_lines = "\n".join([f"- {item.title()}" for item in top_items])
                             return (
-                                f"Maaf kijiye, {state} {district if district else ''} mein '{commodity}' ke taja bhav abhi nahi mile.\n"
-                                f"Yahan available commodities hain:\n{commodity_lines}\n"
-                                f"Aapko inme se kis commodity ka rate dekhna hai?"
+                                f"'{commodity}' ka latest rate {state} {district if district else ''} me nahi mila.\n"
+                                f"Available commodities:\n{commodity_lines}\n"
+                                f"Inme se kis commodity ka rate dekhna hai?"
                             )
                 except Exception:
                     pass
 
-                return f"Maaf kijiye, {state} {district if district else ''} mein {commodity} ke taja bhav abhi update nahi huye hain."
+                return f"{commodity} ka latest rate {state} {district if district else ''} me abhi available nahi hai."
             
             result_str = f"Live Mandi Rate Update ({commodity} - {district if district else state}):\n"
             latest_available_date = None
@@ -135,13 +135,13 @@ def get_mandi_prices(commodity: str = "Wheat", state: str = "Gujarat", district:
                 price_per_20kg = modal_price / 5
                 result_str += (
                     f"- {mandi}: ₹{int(modal_price)}/100kg, ₹{price_per_20kg:.0f}/20kg (1 mann) "
-                    f"[Taja Rate: {date}]\n"
+                    f"[Latest Date: {date}]\n"
                 )
 
             today = datetime.now().date()
             if latest_available_date and latest_available_date < today:
                 result_str += (
-                    f"\nNote: Aaj ({today.strftime('%d-%m-%Y')}) ka data abhi publish nahi hua. "
+                    f"\nNote: Aaj ka data ({today.strftime('%d-%m-%Y')}) abhi publish nahi hua. "
                     f"Latest available update {latest_available_date.strftime('%d-%m-%Y')} ka hai."
                 )
             print(
