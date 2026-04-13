@@ -1,0 +1,17 @@
+2026-04-13 11:06:03,907 INFO Scraping start...
+2026-04-13 11:06:03,907 INFO ====== WebDriver manager ======
+2026-04-13 11:06:04,025 INFO Get LATEST chromedriver version for google-chrome
+2026-04-13 11:06:04,117 INFO Get LATEST chromedriver version for google-chrome
+2026-04-13 11:06:04,191 INFO There is no [linux64] chromedriver "144.0.7559.133" for browser google-chrome "144.0.7559" in cache
+2026-04-13 11:06:04,192 INFO Get LATEST chromedriver version for google-chrome
+2026-04-13 11:06:04,453 INFO WebDriver version 144.0.7559.133 selected
+2026-04-13 11:06:04,459 INFO Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/linux64/chromedriver-linux64.zip
+2026-04-13 11:06:04,460 INFO About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/linux64/chromedriver-linux64.zip
+2026-04-13 11:06:04,575 INFO Driver downloading response is 200
+2026-04-13 11:06:05,136 INFO Get LATEST chromedriver version for google-chrome
+2026-04-13 11:06:05,469 INFO Driver has been saved in cache [/home/gopi/.wdm/drivers/chromedriver/linux64/144.0.7559.133]
+2026-04-13 11:06:05,851 INFO Loading https://www.myscheme.gov.in/search?tags=farmer
+2026-04-13 11:06:12,312 INFO Loading https://www.myscheme.gov.in/search?tags=agriculture
+2026-04-13 11:06:18,198 INFO Scrape finished: 6 unique documents
+2026-04-13 11:06:18,850 INFO 6 scheme documents Chroma me index ho gaye.
+2026-04-13 11:06:18,850 INFO Done! 6 documents indexed.

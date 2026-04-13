@@ -77,8 +77,12 @@ class ChatBot:
                 "1) WEATHER_QUERY\n"
                 "2) MANDI_QUERY\n"
                 "3) SCHEME_QUERY\n"
-                "4) RECALL_QUERY (when user asks about previous messages/context like 'maine kya pucha tha', 'kis city ka', 'mera naam kya hai')\n"
-                "5) GENERAL_CHAT\n\n"
+                "4) FASAL_QUERY (crop schedule: sowing, irrigation, fertilizer, harvesting)\n"
+                "5) PEST_QUERY (keeda, bimari, spray, disease treatment)\n"
+                "6) SOIL_QUERY (mitti type, pH, soil nutrients, soil health)\n"
+                "7) FARMING_TIPS_QUERY (general kheti tips, seasonal guidance, water saving, crop planning)\n"
+                "8) RECALL_QUERY (when user asks about previous messages/context like 'maine kya pucha tha', 'kis city ka', 'mera naam kya hai')\n"
+                "9) GENERAL_CHAT\n\n"
                 f"Recent Session History:\n{recent_history}\n\n"
                 f"Request: '{user_input}'\n"
                 "Reply ONLY one label."
@@ -166,6 +170,146 @@ class ChatBot:
                 if sc_tool:
                     print(f"[TOOL INPUT] session={session_id} tool=get_govt_schemes query={user_input}", flush=True)
                     tool_res = sc_tool.function(search_query=user_input, session_id=session_id)
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
+
+            # --- FASAL RAG ---
+            if "FASAL" in intent:
+                fasal_tool = next((t for t in self.tools if t.name == "get_fasal_advice"), None)
+                if fasal_tool:
+                    print(f"[TOOL INPUT] session={session_id} tool=get_fasal_advice query={user_input}", flush=True)
+                    tool_res = fasal_tool.function(query=user_input, top_k=3, session_id=session_id)
+                    print(
+                        f"[RAG RETRIEVED] session={session_id} query={user_input}\n{tool_res}",
+                        flush=True
+                    )
+                    if "Fasal Adviser (RAG result):" in tool_res:
+                        final_res = self.llm.chat([
+                            {
+                                "role": "system",
+                                "content": (
+                                    "Tum KisanBot ho. Neeche diye gaye retrieved crop notes ko base banakar "
+                                    "short, practical Hinglish (Roman script only) answer do. "
+                                    "Steps/bullets me do, extra fluff mat do."
+                                )
+                            },
+                            {
+                                "role": "user",
+                                "content": (
+                                    f"User question: {user_input}\n\n"
+                                    f"Retrieved notes:\n{tool_res}"
+                                )
+                            }
+                        ])
+                        print(
+                            f"[RAG FINAL] session={session_id} query={user_input}\nresponse={final_res}",
+                            flush=True
+                        )
+                        self.save_to_db(session_id, "assistant", final_res)
+                        return final_res
+                    print(
+                        f"[RAG FINAL] session={session_id} query={user_input}\nresponse={tool_res}",
+                        flush=True
+                    )
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
+
+            # --- PEST RAG ---
+            if "PEST" in intent:
+                pest_tool = next((t for t in self.tools if t.name == "get_pest_advice"), None)
+                if pest_tool:
+                    print(f"[TOOL INPUT] session={session_id} tool=get_pest_advice query={user_input}", flush=True)
+                    tool_res = pest_tool.function(query=user_input, top_k=3, session_id=session_id)
+                    print(f"[RAG RETRIEVED] session={session_id} domain=pest query={user_input}\n{tool_res}", flush=True)
+                    if "Pest & Disease Adviser (RAG result):" in tool_res:
+                        final_res = self.llm.chat([
+                            {
+                                "role": "system",
+                                "content": (
+                                    "Tum KisanBot ho. Sirf diye gaye retrieved pest/disease notes par based "
+                                    "short, practical Hinglish (Roman script only) answer do. "
+                                    "Agar context me direct jawab na ho to clearly bolo: "
+                                    "'Is topic ka exact detail abhi knowledge base me nahi mila.' "
+                                    "3-5 bullet points me jawab do, extra facts mat jodo."
+                                ),
+                            },
+                            {
+                                "role": "user",
+                                "content": (
+                                    f"User question: {user_input}\n\n"
+                                    f"Retrieved notes:\n{tool_res}"
+                                ),
+                            },
+                        ])
+                        print(f"[RAG FINAL] session={session_id} domain=pest query={user_input}\nresponse={final_res}", flush=True)
+                        self.save_to_db(session_id, "assistant", final_res)
+                        return final_res
+                    print(f"[RAG FINAL] session={session_id} domain=pest query={user_input}\nresponse={tool_res}", flush=True)
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
+
+            # --- SOIL RAG ---
+            if "SOIL" in intent:
+                soil_tool = next((t for t in self.tools if t.name == "get_soil_health_advice"), None)
+                if soil_tool:
+                    print(f"[TOOL INPUT] session={session_id} tool=get_soil_health_advice query={user_input}", flush=True)
+                    tool_res = soil_tool.function(query=user_input, top_k=3, session_id=session_id)
+                    print(f"[RAG RETRIEVED] session={session_id} domain=soil query={user_input}\n{tool_res}", flush=True)
+                    if "Soil Health Adviser (RAG result):" in tool_res:
+                        final_res = self.llm.chat([
+                            {
+                                "role": "system",
+                                "content": (
+                                    "Tum KisanBot ho. Sirf diye gaye soil-health retrieved notes par based "
+                                    "short aur practical Hinglish (Roman script only) answer do. "
+                                    "Agar exact detail context me na mile to clearly bolo. "
+                                    "3-5 bullet points me structured answer do, extra facts add mat karo."
+                                ),
+                            },
+                            {
+                                "role": "user",
+                                "content": (
+                                    f"User question: {user_input}\n\n"
+                                    f"Retrieved notes:\n{tool_res}"
+                                ),
+                            },
+                        ])
+                        print(f"[RAG FINAL] session={session_id} domain=soil query={user_input}\nresponse={final_res}", flush=True)
+                        self.save_to_db(session_id, "assistant", final_res)
+                        return final_res
+                    print(f"[RAG FINAL] session={session_id} domain=soil query={user_input}\nresponse={tool_res}", flush=True)
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
+
+            # --- FARMING TIPS RAG ---
+            if "FARMING_TIPS" in intent or "FARMING" in intent:
+                tips_tool = next((t for t in self.tools if t.name == "get_farming_tips_advice"), None)
+                if tips_tool:
+                    print(f"[TOOL INPUT] session={session_id} tool=get_farming_tips_advice query={user_input}", flush=True)
+                    tool_res = tips_tool.function(query=user_input, top_k=3, session_id=session_id)
+                    print(f"[RAG RETRIEVED] session={session_id} domain=farming query={user_input}\n{tool_res}", flush=True)
+                    if "Farming Tips Adviser (RAG result):" in tool_res:
+                        final_res = self.llm.chat([
+                            {
+                                "role": "system",
+                                "content": (
+                                    "Tum KisanBot ho. Sirf diye gaye farming tips retrieved notes par based "
+                                    "short, actionable Hinglish (Roman script only) answer do. "
+                                    "3-6 bullet points do, unnecessary text mat do."
+                                ),
+                            },
+                            {
+                                "role": "user",
+                                "content": (
+                                    f"User question: {user_input}\n\n"
+                                    f"Retrieved notes:\n{tool_res}"
+                                ),
+                            },
+                        ])
+                        print(f"[RAG FINAL] session={session_id} domain=farming query={user_input}\nresponse={final_res}", flush=True)
+                        self.save_to_db(session_id, "assistant", final_res)
+                        return final_res
+                    print(f"[RAG FINAL] session={session_id} domain=farming query={user_input}\nresponse={tool_res}", flush=True)
                     self.save_to_db(session_id, "assistant", tool_res)
                     return tool_res
 

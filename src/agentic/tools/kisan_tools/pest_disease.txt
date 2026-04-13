@@ -1,0 +1,428 @@
+================================================================
+KISANBOT - PEST & DISEASE DATA FILE
+RAG ke liye complete pest aur bimari ki jankari
+Keede aur bimari ki pehchaan aur ilaj Hindi mein
+================================================================
+
+================================================================
+=== GEHU (WHEAT) KE KEEDE AUR BIMARI ===
+================================================================
+
+BIMARIYAN:
+
+1. YELLOW RUST (PEELI KINK):
+   Pehchaan: Patto par peeli dhariyan - powder jesi
+   Kab: Thand mein - November se January
+   Ilaj: Propiconazole 25 EC - 1 ml per liter paani spray
+   Bachav: Resistant variety lagayein (HD-2967, PBW-343)
+
+2. BROWN RUST (BHOORI KINK):
+   Pehchaan: Patto par bhoore-orange rang ke pustules
+   Ilaj: Propiconazole spray karein turant
+   Samay: February-March mein zyada
+
+3. BLACK RUST (STEM RUST):
+   Pehchaan: Tane aur patto par kale pustules
+   Ilaj: Mancozeb 75 WP - 2.5 gram per liter spray
+   Khaas: Agar zyada ho to do spray 10 din ke antral par
+
+4. KARNAL BUNT:
+   Pehchaan: Dane andar se kale, gande smell
+   Bachav: Vitavax 75 WP se beej upchar (2.5 gram per kg beej)
+   Certified seed hi lagayein
+
+5. LOOSE SMUT:
+   Pehchaan: Bali mein daane nahi - sirf kaala powder
+   Bachav: Hot water treatment (52 degree Celsius 10 min) ya Carboxin
+   Note: Ek baar ho gaya to koi ilaj nahi - prevention important
+
+6. POWDERY MILDEW:
+   Pehchaan: Patto par safed powder jesi parat
+   Ilaj: Triadimefon 25 WP - 1 gram per liter spray
+
+KEEDE:
+
+1. APHID (MAAHU):
+   Pehchaan: Chote hare-peele keede patto ke neeche
+   Nuksan: Ras choste hain - patte curl ho jaate hain
+   Ilaj: Imidacloprid 17.8 SL - 250 ml per hectare
+   Ya: Thiamethoxam 25 WG - 100 gram per hectare
+   Biological: Syrphid flies aur ladybird beetles natural enemies
+
+2. TERMITE (DEEMAK):
+   Pehchaan: Mitti mein tunnel banate hain, roots khaate hain
+   Paudha ek taraf gir ke sookh jata hai
+   Ilaj: Chlorpyriphos 20 EC - 2.5 liter per hectare - mitti mein
+   Bachav: FYM acchi tarah paka ke dein
+
+3. ARMY WORM:
+   Pehchaan: Raaton mein patte khaate hain - subah mitti mein milte hain
+   Ilaj: Chlorpyriphos spray karein - shaam ko
+
+================================================================
+=== DHAN (RICE) KE KEEDE AUR BIMARI ===
+================================================================
+
+BIMARIYAN:
+
+1. BLAST BIMARI (SABSE KHATARNAK):
+   Pehchaan: Patto par diamond shape bhoore dabbe - white center
+   Neck blast: Bali ka tana kala ho ke toot jata hai
+   Ilaj: Tricyclazole 75 WP - 6 gram per 15 liter paani
+   Ya: Isoprothiolane 40 EC - 1.5 ml per liter
+   Samay: Monsoon mein temperature 25-28 degree ho to zyada
+   Khaas: Pehli spray symptoms dekh ke, doosri 10 din baad
+
+2. SHEATH BLIGHT:
+   Pehchaan: Paani ki line ke paas tane par oval dabbe
+   Pehle safed phir bhoore ho jaate hain
+   Ilaj: Hexaconazole 5 SC - 2 ml per liter spray
+   Ya: Validamycin 3L - 2 ml per liter spray
+
+3. BACTERIAL LEAF BLIGHT (BLB):
+   Pehchaan: Patte ki edge se peela-orange rang
+   Kaafi hawa aur baarish ke baad zyada
+   Ilaj: Copper Oxychloride spray karein
+   Resistant variety lagayein (IR-36, Swarna Sub-1)
+
+4. FALSE SMUT:
+   Pehchaan: Bali mein kuch dane orange-green powder se dhake
+   Ilaj: Propiconazole spray karein heading se pehle
+
+5. BROWN SPOT:
+   Pehchaan: Patto par bhoore oval dabbe - yellow halo ke saath
+   Poshan ki kami mein zyada hota hai
+   Ilaj: Mancozeb spray + Zinc dein mitti mein
+
+KEEDE:
+
+1. BROWN PLANT HOPPER (BPH):
+   Pehchaan: Gol brown keede - paani ke paas - paudhe neeche sukh rahe
+   "Hopperburn" - circular sukha patches khet mein
+   Ilaj: Imidacloprid 17.8 SL ya BPMC spray karein
+   Bachav: Resistant variety (MTU-1010), zyada Nitrogen mat dein
+
+2. STEM BORER (TANA CHHEDAK):
+   Pehchaan: Dead heart - paudhe ka centre sukh jata hai
+   White ear - bali andar se khaali
+   Ilaj: Chlorpyriphos granules - 10 kg per acre mitti mein
+   Ya: Cartap Hydrochloride spray karein
+   Samay: 30-35 din ke paudhe par attack karta hai
+
+3. GALL MIDGE:
+   Pehchaan: Tana fool jaata hai - silver shoot banta hai
+   Ilaj: Carbofuran 3G - 33 kg per hectare mitti mein
+   Bachav: Resistant variety lagayein
+
+4. LEAF FOLDER:
+   Pehchaan: Patte fold ho jaate hain - andar keeda
+   Ilaj: Chlorpyriphos spray karein
+
+5. HISPA:
+   Pehchaan: Patto par safed dhariyan - keeda patta khaata hai
+   Ilaj: Acephate spray karein
+
+================================================================
+=== TOMATO (TAMATAR) KE KEEDE AUR BIMARI ===
+================================================================
+
+BIMARIYAN:
+
+1. EARLY BLIGHT (ALTERNARIA):
+   Pehchaan: Purane patto par bhoore dabbe - target board pattern
+   Yellow halo ke saath circles mein dabbe
+   Ilaj: Mancozeb 75 WP - 2 gram per liter spray
+   Ya: Chlorothalonil spray karein
+   10 din ke antral par spray karein
+
+2. LATE BLIGHT (PHYTOPHTHORA):
+   Pehchaan: Patte aur tane par dark green to black dabbe
+   Neeche safed fungal growth dikhti hai
+   Fruits bhi sada jaate hain
+   Ilaj: Metalaxyl + Mancozeb (Ridomil Gold) - 2 gram per liter
+   Khaas: Bahut jaldi failti hai - turant spray karein
+
+3. FUSARIUM WILT:
+   Pehchaan: Ek taraf patte murjha jaate hain - tane andar brown
+   Ilaj: Trichoderma viride soil application karein
+   Carbendazim drench karein
+   Resistant variety use karein
+
+4. BACTERIAL WILT:
+   Pehchaan: Paudha achanak mur jata hai - tane se safed pani aata hai
+   Ilaj: Koi chemical nahi - infected paudhe nikaalo
+   Crop rotation zaroor karein
+   Raised bed mein ugayein
+
+5. TOMATO MOSAIC VIRUS (ToMV):
+   Pehchaan: Patte mottled (chita) aur curl ho jaate hain
+   Fruits chote aur misshapen
+   Ilaj: Aphid aur whitefly control karein (vector hain)
+   Infected paudhe nikaal dein
+
+6. LEAF CURL VIRUS:
+   Pehchaan: Patte upar ki taraf curl ho jaate hain - chhote
+   Ilaj: Whitefly control karein - virus failata hai
+
+KEEDE:
+
+1. FRUIT BORER (HELICOVERPA):
+   Sabse bada dushman tomato ka
+   Pehchaan: Fruit mein gol chhed - andar caterpillar
+   Ilaj: Spinosad 45 SC - 0.3 ml per liter spray
+   Ya: Emamectin Benzoate 5 SG - 0.5 gram per liter
+   Biological: NPV (Nuclear Polyhedrosis Virus) spray karein
+
+2. WHITEFLY:
+   Pehchaan: Chote safed keede - patte hilane par ud jaate hain
+   Virus failate hain - bahut dangerous
+   Ilaj: Imidacloprid 17.8 SL - 0.5 ml per liter
+   Ya: Thiamethoxam spray karein
+   Yellow sticky traps lagayein
+
+3. APHID (MAAHU):
+   Pehchaan: Patto ke neeche chote hare-kale keede
+   Ras choste hain + virus failate hain
+   Ilaj: Dimethoate 30 EC - 1.5 ml per liter spray
+
+4. SPIDER MITE:
+   Pehchaan: Bahut chote - patto ke neeche web (jala) banate hain
+   Patte bronze ya silver rang ke ho jaate hain
+   Garmi mein zyada
+   Ilaj: Propargite spray karein
+   Ya: Abamectin 1.9 EC spray
+
+5. THRIPS:
+   Pehchaan: Bahut chote - patte silver rang mein
+   Pallo ki nasal ke paas dhamke
+   Ilaj: Spinosad spray karein
+
+================================================================
+=== COTTON (KAPAS) KE KEEDE AUR BIMARI ===
+================================================================
+
+BIMARIYAN:
+
+1. BACTERIAL BLIGHT (ANGULAR LEAF SPOT):
+   Pehchaan: Patto par angular (corner wale) dabbe - paani soaked
+   Baad mein brown ho jaate hain
+   Ilaj: Streptomycin Sulphate + Copper Oxychloride spray
+   Bachav: Certified acid delinted seed use karein
+
+2. FUSARIUM WILT:
+   Pehchaan: Paudhe ka ek taraf sukh jaana
+   Tane andar brown discoloration
+   Ilaj: Soil treatment Trichoderma se
+   Resistant Bt varieties use karein
+
+3. ALTERNARIA LEAF SPOT:
+   Pehchaan: Patto par circular bhoore dabbe - yellow ring
+   Ilaj: Mancozeb 75 WP spray karein
+
+KEEDE:
+
+1. PINK BOLLWORM (GULABI KEEDA):
+   Sabse khatarnak cotton ka dushman
+   Pehchaan: Phool ka andar caterpillar - boll nahi khulta
+   Ilaj: Bt Cotton variety lagayein (already resistant)
+   Chemical: Profenophos 50 EC - 2 ml per liter spray
+
+2. AMERICAN BOLLWORM (HELICOVERPA):
+   Pehchaan: Boll mein chhed - green caterpillar
+   Ilaj: Emamectin Benzoate spray
+   Biological: HaNPV spray karein
+
+3. WHITEFLY:
+   Sabse zyada problem aaj kal - CLCuV virus failata hai
+   Pehchaan: Patto ke neeche safed keede
+   Ilaj: Thiamethoxam 25 WG - 100 gram per hectare
+   Imidacloprid spray karein
+
+4. APHID:
+   Ilaj: Dimethoate spray karein
+
+5. JASSID (LEAFHOPPER):
+   Pehchaan: Patte kinare se peele ho jaate hain - cup shaped
+   Ilaj: Imidacloprid spray karein
+
+6. THRIPS:
+   Pehchaan: Patte silver rang - thrips andar
+   Ilaj: Spinosad spray karein
+
+7. MEALYBUG:
+   Pehchaan: Safed powder jaisi insects - bunches mein
+   Ilaj: Profenophos spray, Imidacloprid systemic
+
+================================================================
+=== VEGETABLES KE COMMON KEEDE ===
+================================================================
+
+1. DIAMONDBACK MOTH (GOBHI MEIN):
+   Pehchaan: Patte pe chhote holes - V shaped patterns
+   Ilaj: Spinosad ya Emamectin Benzoate spray
+
+2. CABBAGE LOOPER:
+   Pehchaan: Green caterpillar - patte khaata hai
+   Ilaj: Chlorpyriphos ya Bt (Bacillus thuringiensis) spray
+
+3. CUTWORM:
+   Pehchaan: Paudha raaton mein kata - mitti mein milta hai
+   Ilaj: Chlorpyriphos granules mitti mein
+
+4. ROOT KNOT NEMATODE:
+   Pehchaan: Roots mein gaanth (galls) banti hain
+   Paudha chota aur peela rehta hai
+   Ilaj: Carbofuran 3G mitti mein
+   Biological: Paecilomyces lilacinus soil application
+   Marigold intercrop lagayein - nematode repellent
+
+5. RED SPIDER MITE:
+   Pehchaan: Patte ke neeche laal chote keede + web
+   Garmi mein zyada problem
+   Ilaj: Propargite ya Dicofol spray
+
+================================================================
+=== FRUIT CROPS KE KEEDE ===
+================================================================
+
+MANGO (AAM):
+1. Mango Hopper: Manjhle mein chote keede - mohor khaate hain
+   Ilaj: Imidacloprid spray mohar aane se pehle
+
+2. Fruit Fly: Aam mein anda deta hai - andar keeda
+   Ilaj: Protein hydrolysate bait traps lagayein
+   Malathion spray karein
+
+3. Powdery Mildew: Mohar par safed powder
+   Ilaj: Sulphur spray karein
+
+BANANA (KELA):
+1. Pseudostem Weevil: Kele ke tane mein
+   Ilaj: Phorate granules apply karein
+
+2. Panama Wilt: Paudha sukh jata hai
+   Ilaj: Resistant variety (Grand Naine), soil treatment
+
+================================================================
+=== INTEGRATED PEST MANAGEMENT (IPM) ===
+================================================================
+
+IPM KE MUKHYA SIDDHANT:
+
+1. FASAL CHAKKAR (CROP ROTATION):
+   - Ek hi fasal baar baar mat lagao
+   - Pest ka cycle toot ta hai
+   - Dal fasal ke baad anaj fasal
+
+2. RESISTANT VARIETIES:
+   - Wherever available - use karein
+   - Seed companies se certified seed lo
+   - KVK se advice lo
+
+3. CULTURAL PRACTICES:
+   - Deep plowing garmi mein - keede marte hain
+   - Proper drainage - fungal disease kam
+   - Timely sowing - pest escape ho jata hai
+   - Balanced fertilizers dein - zyada Nitrogen mat dein
+
+4. BIOLOGICAL CONTROL:
+   - Natural enemies ko bachao - Lady beetle, Syrphid fly
+   - Bt (Bacillus thuringiensis) spray - caterpillars ke liye
+   - Trichoderma - soil borne diseases ke liye
+   - Trichogramma cards lagao - egg parasite
+
+5. MECHANICAL METHODS:
+   - Yellow sticky traps - whitefly, thrips ke liye
+   - Pheromone traps - moths ke liye (Helicoverpa, Spodoptera)
+   - Light traps - raaton ke moths ke liye
+   - Hand picking - bade keede aur eggs
+
+6. CHEMICAL CONTROL (ANTIM UPAAYA):
+   - Tab spray karein jab aur koi option na ho
+   - Economic threshold level (ETL) ke baad hi spray
+   - Label padein aur dose follow karein
+   - Safety equipment pahno - gloves, mask
+   - Spray ke 7-14 din baad khaana mat todon
+
+================================================================
+=== SPRAY KE NIYAM (SPRAY RULES) ===
+================================================================
+
+SPRAY KARNE KA SAHI TARIKA:
+1. Subah ya shaam spray karein - garmi mein nahi
+2. Hawa na chal rahi ho to spray karein
+3. Baarish hone se pehle spray mat karein
+4. Mixing sahi karein - label padein
+5. Nozzle se uniform spray karein
+6. Patto ke neeche bhi spray karein - keede wahan hote hain
+
+SAFETY:
+- Mask, gloves, full sleeves kapde pahno
+- Spray karte waqt cigarette, khaana, paani mat lo
+- Spray ke baad haath dholo, kapde badlo
+- Dawayi andar lene ka - turant doctor ke paas jaao
+- Bachon se door rakhein chemicals
+
+MIXING ORDER:
+1. Pehle paani lo
+2. Fir wettable powder (WP) milao - pehle thoda paani mein gholo
+3. Fir EC ya liquid milao
+4. Mix karein achhi tarah
+5. Sprayer mein daalo
+
+DOSAGE YAAD RAKHEIN:
+- Label mein jo likha hai wohi follow karein
+- Zyada dose = zyada nuksan (crop burn, resistance)
+- Kam dose = keeda nahi marega (resistance banta hai)
+- Sahi dose = sahi result
+
+WAITING PERIOD (SPRAY KE BAAD KHATNA):
+- Fruits ya vegetables spray ke kitne din baad todin:
+  * Imidacloprid: 7 din wait karein
+  * Chlorpyriphos: 14 din wait karein
+  * Spinosad: 3 din wait karein
+  * Mancozeb: 7 din wait karein
+
+================================================================
+=== JAIVIK (ORGANIC) KEEDE CONTROL ===
+================================================================
+
+NEEM OIL SPRAY:
+- 5 ml neem oil per liter paani
+- 1 gram detergent soap milao (emulsifier)
+- Ache se hilao phir spray
+- Har 10-15 din mein repeat karein
+- Soft bodied insects ke liye best (Aphid, Whitefly, Mite)
+
+GARLIC SPRAY:
+- 100 gram lehsun pees lo
+- 1 liter paani mein 24 ghante bhigowo
+- Filter karein + 10 liter paani mein milao
+- Spray karein
+- Aphids, caterpillars ke liye
+
+CHILI-GARLIC SPRAY:
+- 250 gram mirchi + 250 gram lehsun pees lo
+- 4 liter paani mein ubaalein
+- Thanda karein, filter karein
+- 10 liter paani mein milao + soap
+- General insecticide
+
+TOBACCO SPRAY:
+- 1 kg tobacco powder
+- 10 liter paani mein 24 ghante bhigowo
+- Filter karein, 50 liter paani mein milao
+- Sucking insects ke liye effective
+
+DASHAPARNI ARK:
+- 10 alag alag patte pees lo
+- Neem, Dhatura, Papaya, Tulsi, Castor wagera
+- 10 liter paani mein boil karein
+- Filter karein - 3% spray karein
+- Broad spectrum organic pesticide
+
+================================================================
+END OF PEST AND DISEASE DATA FILE
+Source: ICAR, NBPGR, NCIPM, Plant Protection Quarterly
+KisanBot RAG Data - Version 1.0
+================================================================

@@ -1,0 +1,366 @@
+================================================================
+KISANBOT - SOIL HEALTH DATA FILE
+RAG ke liye complete soil health knowledge
+Mitti ki jankari Hindi mein
+================================================================
+
+================================================================
+=== MITTI KE PRAKAR (TYPES OF SOIL) ===
+================================================================
+
+1. KALI MITTI (BLACK SOIL / REGUR SOIL):
+   - Kahan milti hai: Maharashtra, MP, Gujarat, Telangana, Karnataka
+   - Khaasiyat: Paani rok ke rakhti hai, clay content zyada
+   - Best crops: Cotton, Sugarcane, Wheat, Jowar, Sunflower
+   - pH: 7.5 se 8.5 (slightly alkaline)
+   - Calcium aur Magnesium zyada hota hai
+   - Nitrogen aur Phosphorus ki kami hoti hai aksar
+
+2. LAAL MITTI (RED SOIL):
+   - Kahan milti hai: Tamil Nadu, Andhra Pradesh, Karnataka, Odisha
+   - Khaasiyat: Iron oxide zyada - isliye laal rang
+   - Best crops: Groundnut, Potato, Millets, Pulses
+   - pH: 6.0 se 7.5
+   - Nitrogen, Phosphorus, Humus ki kami hoti hai
+   - Organic matter badhane ki zaroorat
+
+3. DOMAT MITTI (LOAMY SOIL):
+   - Kahan milti hai: Punjab, Haryana, UP, Bihar
+   - Khaasiyat: Sand + Silt + Clay ka mix - sabse best mitti
+   - Best crops: Wheat, Rice, Sugarcane, Vegetables - sab kuch
+   - pH: 6.5 se 7.5
+   - Sabse fertile mitti hai
+   - Isme sab crops achhe se ho sakte hain
+
+4. BALU MITTI (SANDY SOIL):
+   - Kahan milti hai: Rajasthan, UP ke kuch hisse
+   - Khaasiyat: Paani jaldi nikalti hai, hawa zyada
+   - Best crops: Groundnut, Bajra, Watermelon, Moongfali
+   - pH: 6.0 se 7.0
+   - Organic matter bahut kam
+   - Baar baar sinchai chahiye
+
+5. CHIKNAI MITTI (CLAY SOIL):
+   - Khaasiyat: Paani rok leti hai, jaldi package hoti hai
+   - Best crops: Rice, Sugarcane
+   - Drainage ki zaroorat
+   - Gypsum aur organic matter milayein
+
+6. PAHADI MITTI (HILL SOIL):
+   - Kahan milti hai: Himachal, Uttarakhand, Northeast
+   - Khaasiyat: Thin layer, acidic hoti hai
+   - Best crops: Tea, Apple, Potato, Vegetables
+   - pH: 4.5 se 6.0 (acidic)
+   - Lime dene ki zaroorat aksar
+
+7. ALLUVIAL MITTI (JALODHBHAV MITTI):
+   - Kahan milti hai: Ganga plains, Brahmaputra valley
+   - Khaasiyat: Nadion se ayi mitti - bahut fertile
+   - Best crops: Rice, Wheat, Sugarcane, Vegetables sab
+   - India ki 40% zameen par hai
+   - Regularly flood se naveen hoti rehti hai
+
+================================================================
+=== MITTI KI pH (ACIDITY/ALKALINITY) ===
+================================================================
+
+pH SCALE SAMAJHNA:
+- pH 0-6: Acidic (Khatti mitti)
+- pH 7: Neutral (Sahi mitti)
+- pH 8-14: Alkaline (Khari mitti)
+- Best range crops ke liye: pH 6.0 se 7.5
+
+pH KITNA HONA CHAHIYE FASAL KE HISAAB SE:
+- Gehu: 6.0 - 7.5
+- Dhan (Rice): 5.5 - 6.5
+- Makka: 6.0 - 7.0
+- Tomato: 6.0 - 7.0
+- Pyaz: 6.0 - 7.0
+- Aloo: 5.0 - 6.0
+- Groundnut: 6.0 - 6.5
+- Soybean: 6.0 - 7.0
+- Cotton: 6.0 - 8.0
+- Sugarcane: 6.0 - 7.5
+- Tea: 4.5 - 5.5
+
+ACIDIC MITTI THEEK KARNA:
+- Lime (Calcium Carbonate): 2-4 ton per hectare
+- Dolomite Lime: Magnesium bhi milata hai
+- Wood ash: Chhoti quantity mein
+- Kab dein: Bote se 2-4 hafte pehle
+- Jitna acidic utna zyada lime
+
+ALKALINE MITTI THEEK KARNA:
+- Gypsum (Calcium Sulphate): 5-10 ton per hectare
+- Sulphur powder: 200-400 kg per hectare
+- FYM zyada dein - humus badhata hai pH kam karta hai
+- Ammonium Sulphate fertilizer use karein
+- Kab dein: Bote se 1-2 mahine pehle
+
+================================================================
+=== MITTI KE POSHAN TATVA (SOIL NUTRIENTS) ===
+================================================================
+
+MUKHYA TATVA (MACRONUTRIENTS):
+
+1. NITROGEN (NAIJAAN - N):
+   - Kaam: Patto ka hara rang, badhwaar
+   - Kami ke lakshan: Patte peele ho jaate hain, neeche ke pehle
+   - Zyada hone par: Zyada patta, kam phal/dana
+   - Strot: Urea (46% N), DAP (18% N), Ammonium Sulphate (21% N)
+   - Dene ka samay: 2-3 kist mein dein - ek baar mat dein
+   - Khaas baat: Pani mein ghul ke neeche jata hai - chhota chhota dein
+
+2. PHOSPHORUS (PHOSPHORUS - P):
+   - Kaam: Jad (roots) ki badhwaar, phool aur phal banana
+   - Kami ke lakshan: Patte neele-hare ya purple ho jaate hain
+   - Strot: DAP (46% P2O5), SSP (16% P2O5), Rock Phosphate
+   - Dene ka samay: Bote ke samay poora dein - khet mein mila dein
+   - Khaas baat: Mitti mein zyada samay rahta hai - ek baar mein dein
+
+3. POTASSIUM (POTASH - K):
+   - Kaam: Fruit quality, disease resistance, paani regulation
+   - Kami ke lakshan: Patte ke kinare jal jaate hain, brown ho jaate hain
+   - Strot: MOP/KCl (60% K2O), SOP (50% K2O)
+   - Dene ka samay: Bote ke samay poora ya 2 kist mein
+   - Khaas baat: Fruit aur vegetable crops mein zyada zaroori
+
+MADHYAM TATVA (SECONDARY NUTRIENTS):
+
+4. CALCIUM (Ca):
+   - Kaam: Cell wall banana, root growth
+   - Kami ke lakshan: Naye patte moda hue, tip burn
+   - Strot: Lime, Gypsum, Calcium Nitrate
+   - Tomato, Groundnut mein zyada zaroori
+
+5. MAGNESIUM (Mg):
+   - Kaam: Chlorophyll banana (hara rang)
+   - Kami ke lakshan: Purane patte ke beech peele pad jaate hain
+   - Strot: Dolomite lime, Magnesium Sulphate
+   - Dene ka samay: Dolomite bote se pehle mitti mein
+
+6. SULPHUR (S):
+   - Kaam: Protein banana, oil content
+   - Kami ke lakshan: Naye patte peele, uniform yellowing
+   - Strot: Gypsum, Ammonium Sulphate, Elemental Sulphur
+   - Sarson, Onion, Garlic mein zyada zaroori
+
+SUKSHAM TATVA (MICRONUTRIENTS):
+
+7. ZINC (JASTA - Zn):
+   - Sabse common kami India mein
+   - Kami ke lakshan: Naye patte chote, stippled, brown spots
+   - Ilaj: Zinc Sulphate 25 kg per hectare mitti mein
+   - Ya: 0.5% ZnSO4 spray karein (5 gram per liter)
+   - Kab dein: Bote se pehle ya pehli sinchai baad
+
+8. IRON (LOHA - Fe):
+   - Kami ke lakshan: Naye patte peele, naso ke beech
+   - Zyada alkaline mitti mein kami hoti hai
+   - Ilaj: FeSO4 0.5% spray karein
+   - Chelated iron use karein alkaline mitti mein
+
+9. BORON (B):
+   - Kaam: Phool aur phal banana, cell division
+   - Kami ke lakshan: Terminal bud marna, hollow stem
+   - Ilaj: Borax 1-2 kg per hectare mitti mein
+   - Ya: 0.2% Boric acid spray
+   - Cauliflower, Mustard, Sunflower mein zaroori
+
+10. MANGANESE (Mn):
+    - Kami ke lakshan: Naye patto mein interveinal chlorosis
+    - Ilaj: MnSO4 spray ya mitti mein milayein
+
+11. COPPER (TAAMBA - Cu):
+    - Kami: Patte muda hue, bluish green rang
+    - Ilaj: CuSO4 2.5 kg per hectare
+
+12. MOLYBDENUM (Mo):
+    - Dal faslon mein zaroori - Rhizobium ke liye
+    - Kami: Patte cupped, twisted
+
+================================================================
+=== MITTI PARIKSHAN (SOIL TESTING) ===
+================================================================
+
+KYUN ZAROORI HAI:
+- Sahi khaad ka pata chalat hai - paisa bachta hai
+- Zyada khaad dene se nuksan hota hai
+- Mitti ki pH pata chalti hai
+- Soil Health Card scheme mein free hota hai
+
+KAISE KARWAYEIN:
+- Nazdiki Krishi Vigyan Kendra (KVK) mein jayen
+- Soil Health Card portal par: soilhealth.dac.gov.in
+- Private labs mein bhi hoti hai - Rs 200-500 mein
+- Government ke through bilkul free
+
+SAMPLE LENE KA TARIKA:
+1. Khet ke 8-10 jagah se mitti lo
+2. Upar ki 15-20 cm mitti lo (plow layer)
+3. Sab mix karo ek jagah
+4. Pathri, roots, grass nikalo
+5. 500 gram sample lab mein do
+6. Khali khet se lo - fasal hone par mat lo
+
+REPORT MEIN KYA HOTA HAI:
+- pH value
+- Organic Carbon (%)
+- Available N, P, K
+- Secondary: S, Ca, Mg
+- Micronutrients: Zn, Fe, Mn, Cu, B
+
+================================================================
+=== ORGANIC MATTER AUR HUMUS ===
+================================================================
+
+ORGANIC MATTER KYUN ZAROORI:
+- Mitti ki structure sudhaarta hai
+- Paani rokne ki shakti badhta hai
+- Nutrients dhire dhire milate hain
+- Mitti ke keede zinda rehte hain - beneficial
+- pH balance rehta hai
+
+ORGANIC MATTER KAISE BADHAYEIN:
+
+1. FYM (GOBAR KHAD):
+   - Paka hua gobar - 6 mahine purana
+   - 10-15 ton per hectare per year
+   - Bote se 3-4 hafte pehle mitti mein milayein
+   - NPK ratio: 0.5:0.25:0.5 approximately
+
+2. VERMICOMPOST (KECHUA KHAD):
+   - Kechua se bana organic khad
+   - 4-5 ton per hectare kaafi hai
+   - FYM se 3-4 guna zyada assardar
+   - Khud bana sakte ho ghar mein
+
+3. GREEN MANURE (HARA KHAD):
+   - Dhaincha, Sunhemp, Cowpea ugao
+   - 45-60 din mein jotai kar ke mitti mein milao
+   - 50-60 kg Nitrogen per hectare milta hai
+   - Free khad hai!
+
+4. CROP RESIDUE:
+   - Fasal ke baad thaan mat jalao
+   - Mitti mein joto - decompose hoga
+   - Carbon organic matter badhata hai
+
+5. NEEM CAKE (NEEM KHALI):
+   - 200-400 kg per hectare mitti mein milao
+   - Nitrogen milta hai + nematode control
+   - Soil borne insects bhi kam hote hain
+
+================================================================
+=== MITTI KI SEHAT SUDHARANA (SOIL IMPROVEMENT) ===
+================================================================
+
+BALI MITTI KO BEHTAR BANANA:
+- FYM zyada dein - 20-25 ton
+- Clay soil thodi mila sakte hain
+- Mulching karein - nami rokne ke liye
+- Drip irrigation lagayein
+- Organic matter badhao har saal
+
+CHIKNAI (CLAY) MITTI KO BEHTAR BANANA:
+- Gypsum 5-10 ton per hectare dein
+- FYM dein - structure badhta hai
+- Raised bed farming karein
+- Deep plowing karein
+- Sandy material mix karein
+
+USAD (SALINE) MITTI:
+- Pehchaan: Upar safed namak ki parat
+- Gypsum dein - 10-12 ton per hectare
+- Zyada paani dein - leaching ke liye
+- Salt tolerant varieties lagayen
+- Dhaan (Rice) ugana - leaching mein madad
+
+KHAR (ALKALINE) MITTI:
+- Sulphur powder dein - 400-600 kg per hectare
+- Gypsum dein
+- FYM zyada dein
+- Organic matter badhao
+- Ammonium sulphate use karein Urea ki jagah
+
+ACIDIC MITTI (KHATTI):
+- Lime dein - Agricultural lime ya Dolomite
+- 2-4 ton per hectare
+- Bote se 1 mahine pehle dein
+- Baar baar test karwate raho
+
+================================================================
+=== JAIVIK KHETI (ORGANIC FARMING) ===
+================================================================
+
+JEEVAMRIT BANANE KA TARIKA:
+- 200 liter paani
+- 10 kg desi gaay ka taza gobar
+- 10 liter gomutr (cow urine)
+- 2 kg chane ka atta ya besan
+- 500 gram gudd ya ganna ka ras
+- 1 muthi khet ki mitti
+Sab mix karein - 3-7 din chhodein ferment hone do
+Har 3-4 din stirring karein
+Dose: 200 liter per acre per spray
+
+PANCHGAVYA BANANA:
+- 3 kg gobar
+- 2 liter gomutr
+- 2 liter doodh
+- 1 kg dahi
+- 1 liter ghee
+Mix karein - 7 din ferment karein
+Dose: 3% solution bana ke spray karein
+
+DASHPARNI ARK (KEEDO KE LIYE):
+- 10 alag alag tarah ke patte
+  (Neem, Dhatura, Papaya, Aak, Tulsi, Nirgundi, Custard apple, 
+   Pomegranate, Castor, Bael)
+- 10 liter paani mein ubaalein
+- Thanda karein - filter karein
+- 3-5% solution bana ke spray karein
+- Keede aur bimari dono ke liye
+
+NEEM BASED SPRAY:
+- Neem patti ras: 10 kg patti pees ke 200 liter paani mein
+- Ya Neem tel (oil): 5 ml per liter paani
+- Ya Neem cake extract: 100 gram per liter bhigo ke
+- Har 10-15 din mein spray
+
+================================================================
+=== MITTI CONSERVATION (MITTI BACHANA) ===
+================================================================
+
+EROSION SE BACHAV:
+- Cover crops lagayein - mitti dhakein
+- Contour farming karein pahad par
+- Windbreaks lagayein - hawa se erosion rokein
+- Minimum tillage karein jahan ho sake
+- Mulching karein - plastic ya organic
+
+WATER CONSERVATION:
+- Bund banayein khet mein - paani rokein
+- Check dam banayein - khet ke paas
+- Farm pond banayein - baarish ka paani store karein
+- Mulching se 40-50% paani bachta hai
+- Drip irrigation se 60% paani bachta hai
+
+CROP ROTATION KE FAYDE:
+- Dal fasal baad anaj fasal - nitrogen badhta hai
+- Alag roots - alag depth tak poshan nikalte hain
+- Ek hi fasal baar baar - ek hi poshan kam hota hai
+- Pest aur disease cycle toot ta hai
+- Mitti healthy rehti hai
+
+GOOD CROP ROTATION:
+- Gehu → Moong → Gehu (North India)
+- Rice → Wheat → Moong (Punjab, Haryana)
+- Cotton → Wheat → Moong (Gujarat)
+- Sugarcane → Wheat → Moong (UP)
+
+================================================================
+END OF SOIL HEALTH DATA FILE
+Source: ICAR, NABARD, Soil Health Card Portal, KVK Guidelines
+KisanBot RAG Data - Version 1.0
+================================================================

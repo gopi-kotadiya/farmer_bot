@@ -1,0 +1,807 @@
+================================================================
+KISANBOT - FASAL ADVICE DATA FILE
+RAG ke liye complete farming knowledge
+Sab faslon ki jankari Hindi mein
+================================================================
+
+================================================================
+=== GEHU (WHEAT) - RABI FASAL ===
+================================================================
+
+PARICHAY:
+Gehu India ki sabse important Rabi fasal hai. Yeh November-December mein boya jata hai aur March-April mein kata jata hai. India mein sabse zyada gehu Punjab, Haryana, Uttar Pradesh, Madhya Pradesh aur Rajasthan mein hota hai.
+
+BONA KA SAMAY:
+- Samay: October ke antim hafte se December ke pehle hafte tak
+- Best samay: November 1 se November 20 tak
+- Der se bona: December mein bona ho sakta hai par yield kam hogi
+- Beej dar: 100-125 kg per hectare (seedbed mein boya jaye)
+
+MITTI AUR KHET KI TAIYARI:
+- Mitti: Domat mitti (loamy soil) sabse achhi hoti hai
+- pH: 6.0 se 7.5 ke beech hona chahiye
+- Khet 2-3 baar jotna chahiye
+- Pehli jotai mitti palatne wale haal se karein
+- Aakhri jotai mein mitti bilkul barik karein
+- Khet bilkul seedha aur samtal hona chahiye
+
+KHAD (FERTILIZER):
+- DAP (Di-Ammonium Phosphate): 50 kg per hectare - bote samay
+- Urea: 130 kg per hectare - teen baar mein dein
+  * Pehli baar: Bote samay 45 kg
+  * Doosri baar: Pehli sinchai ke baad 45 kg
+  * Teesri baar: Doosri sinchai ke baad 40 kg
+- Potash: 50 kg per hectare - bote samay
+- Zinc Sulphate: 25 kg per hectare - 3 saal mein ek baar
+
+SINCHAI (IRRIGATION):
+- Kul sinchai: 4-6 baar
+- Pehli sinchai: Bote ke 20-25 din baad (Crown Root Initiation stage)
+- Doosri sinchai: 40-45 din baad (Tillering stage)
+- Teesri sinchai: 60-65 din baad (Jointing stage)
+- Chauthi sinchai: 80-85 din baad (Flowering stage)
+- Paanchvi sinchai: 100-105 din baad (Grain filling stage)
+- Note: Pehli sinchai sabse zaroori hai - kabhi mat chukein
+
+BEEJ KI UNNAT KISAMEN (VARIETIES):
+- HD-2967: Sabse popular, zyada paidawar
+- HD-3086: Gehu blast resistant
+- PBW-343: Punjab ke liye best
+- K-307: UP ke liye best
+- GW-322: Gujarat ke liye best
+- Lok-1: Madhya Pradesh ke liye
+
+AAMDANI (YIELD):
+- Average: 40-50 quintal per hectare
+- Achhe management se: 55-65 quintal per hectare
+
+BIMARI AUR ILAJ:
+1. Gehu ka Rust (Kink):
+   - Pehchaan: Patto par orange ya brown rang ke dabbe
+   - Ilaj: Propiconazole 25 EC - 1 ml per liter paani mein spray karein
+   
+2. Karnal Bunt:
+   - Pehchaan: Dane kale ho jaate hain, gande smell aati hai
+   - Bachav: Beej ko Carboxin se upchar karein bote se pehle
+   
+3. Loose Smut:
+   - Pehchaan: Bali mein daane ki jagah kaala powder
+   - Ilaj: Vitavax 75 WP se beej upchar karein
+
+KEEDE (INSECTS):
+1. Aphid (Maahu):
+   - Pehchaan: Chote hare ya kale keede patto par chipke hote hain
+   - Ilaj: Imidacloprid 17.8 SL - 250 ml per hectare spray karein
+   
+2. Termite (Deemak):
+   - Ilaj: Chlorpyriphos 20 EC - 2.5 liter per hectare mitti mein milayein
+
+KATAI (HARVESTING):
+- Samay: March se April ke beech
+- Pehchaan: Jab dane sakht ho jayein aur pila rang aa jaye
+- Machine se katai best hai
+- Kate ke turant threshing karein
+
+================================================================
+=== DHAN (PADDY/RICE) - KHARIF FASAL ===
+================================================================
+
+PARICHAY:
+Dhan India ki sabse important Kharif fasal hai. Yeh June-July mein boya jata hai aur October-November mein kata jata hai. India mein sabse zyada dhan West Bengal, UP, Punjab, Andhra Pradesh, aur Tamil Nadu mein hota hai.
+
+BONA KA SAMAY:
+- Nursery: May ke antim se June ke pehle hafte mein
+- Ropai (Transplanting): June ke antim se July tak
+- Beej dar nursery mein: 25-30 kg per hectare
+- Nursery area: Ek hectare ke liye 800-1000 sq meter nursery kaafi hai
+
+NURSERY TAIYAR KARNA:
+- Beej ko 24 ghante paani mein bhigoyein
+- Phir nami kapdey mein 2 din rakhein ankur aane tak
+- Nursery mein 2-3 cm gehri seedbeds banayein
+- Beej barayein aur paani bharein
+- 25-30 din mein paudhe ropai ke liye taiyar
+
+MITTI AUR KHET KI TAIYARI:
+- Mitti: Chiknai wali mitti (clayey soil) sabse best
+- pH: 5.5 se 6.5
+- Khet mein 10-15 cm paani bharo phir jotai karo (pudding)
+- Khet bilkul samtal karo - paani ek samaan bharne ke liye
+
+KHAD (FERTILIZER):
+- Nitrogen (Urea): 120 kg per hectare
+  * Pehli baar: Ropai ke 1 hafte baad - 40 kg
+  * Doosri baar: Tillering stage - 40 kg
+  * Teesri baar: Panicle initiation - 40 kg
+- DAP: 60 kg per hectare - ropai se pehle
+- Potash (MOP): 40 kg per hectare - ropai se pehle
+- Zinc Sulphate: 25 kg per hectare har 2-3 saal mein
+
+SINCHAI (IRRIGATION):
+- Ropai ke baad 5-7 cm paani rakhein lagatar
+- Tillering stage mein 2-3 cm paani kaafi hai
+- Flower aane se pehle aur baad mein paani zaroor rakhein
+- Pakne se 2 hafte pehle paani band karein
+
+UNNAT KISAMEN (VARIETIES):
+- Pusa Basmati 1121: Basmati - export quality
+- PR-126: Punjab ke liye - kam paani mein
+- MTU-1010: Andhra Pradesh ke liye
+- Swarna (MTU-7029): Jharkhand, Odisha ke liye
+- IR-36: Kide se bachne wali
+- HKR-127: Haryana ke liye
+
+BIMARI AUR ILAJ:
+1. Blast Bimari:
+   - Pehchaan: Patton par diamond shape ke bhoore dabbe
+   - Ilaj: Tricyclazole 75 WP - 6 gram per 15 liter paani spray
+   
+2. Sheath Blight:
+   - Pehchaan: Tane par pani mein bhoore dabbe
+   - Ilaj: Hexaconazole 5 SC - 2 ml per liter paani spray
+   
+3. Brown Plant Hopper (BPH):
+   - Pehchaan: Paudhe neeche se sukh rahe hain
+   - Ilaj: Imidacloprid 17.8 SL spray karein
+
+KATAI:
+- Samay: October se November
+- Jab 80% dane sone jaise rang ke ho jayein
+- Combine harvester se kataai karein
+- Jaldi kataai karein nahi toh dane girenge
+
+================================================================
+=== MAIZE (MAKKA) - KHARIF/RABI DONO ===
+================================================================
+
+PARICHAY:
+Makka teen mausam mein ho sakta hai - Kharif, Rabi aur Zaid. Yeh ek versatile crop hai jo animal feed, starch, oil aur food ke liye ugaya jata hai.
+
+BONA KA SAMAY:
+- Kharif: June se July (Monsoon ke saath)
+- Rabi: October se November
+- Zaid: February se March
+- Beej dar: 20-25 kg per hectare
+- Row distance: 60-75 cm, Plant distance: 20-25 cm
+
+MITTI:
+- Domat se bhari mitti (loamy to sandy loam)
+- pH: 6.0 se 7.5
+- Acchi drainage zaroori hai
+
+KHAD:
+- Nitrogen: 120-150 kg per hectare (3 kist mein)
+- Phosphorus: 60 kg per hectare
+- Potash: 40 kg per hectare
+- Zinc: 25 kg per hectare
+
+UNNAT KISAMEN:
+- DKC-9144: Hybrid - zyada paidawar
+- Pioneer 30V92: Kharif ke liye
+- Vivek QPM 9: Protein rich
+- HM-4: UP ke liye
+- HQPM-1: Lysine rich
+
+BIMARI:
+1. Turcicum Leaf Blight: Patto par lamba bhoora daag
+   Ilaj: Mancozeb spray karein
+2. Stalk Rot: Tana gal jata hai
+   Ilaj: Achha drainage rakhein, resistant variety lagaayein
+3. Fall Armyworm: Naya keeda - patte kha jata hai
+   Ilaj: Spinetoram 11.7 SC spray karein
+
+PAIDAWAR: 50-70 quintal per hectare hybrid varieties se
+
+================================================================
+=== TOMATO (TAMATAR) ===
+================================================================
+
+PARICHAY:
+Tamatar ek important vegetable crop hai jo saal mein do baar ugaya ja sakta hai. Yeh commercial farming ke liye bahut profitable hai.
+
+BONA KA SAMAY:
+- Kharif: June-July
+- Rabi: September-October
+- Nursery mein pehle ugaayein - 25-30 din
+- Transplanting: Jab paudha 15-20 cm ka ho
+
+NURSERY TAIYARI:
+- Raised beds banayein - 1m x 3m size
+- Beej 1 cm gehraai mein lagayein
+- Row to row: 10 cm, Beej to Beej: 5 cm
+- Paani spray se dein - seedbed mat bigo
+- 25-30 din mein transplant ke liye taiyar
+
+KHET MEIN TRANSPLANTING:
+- Row distance: 60-75 cm
+- Plant distance: 45-60 cm
+- Shaam ke waqt transplant karein
+- Turant paani dein
+
+KHAD:
+- FYM (Gobar khad): 20-25 ton per hectare
+- Nitrogen: 120 kg per hectare (4 kist mein)
+- Phosphorus: 60 kg per hectare
+- Potash: 60 kg per hectare
+- Calcium Nitrate: 200 kg per hectare - fruit setting mein
+
+SINCHAI:
+- Drip irrigation sabse best hai
+- Regular paani chahiye - sukha mat rehne do
+- Fruit development mein zyada paani
+- Pakne ke samay paani kam karein
+
+SAHARA (STAKING):
+- Bamboo ya lathi se support dein
+- 1-1.5 meter ki lathi
+- String se baandhein
+
+UNNAT KISAMEN:
+- Pusa Ruby: Desi variety
+- Arka Vikas: IARI ki variety
+- CO-3: Tamil Nadu ke liye
+- Pusa Hybrid 1: Hybrid variety - zyada paidawar
+- Rashmi: Maharashtra ke liye
+
+BIMARI:
+1. Early Blight: Patto par bhoore dabbe, circles mein
+   Ilaj: Mancozeb 75 WP - 2 gram per liter spray
+2. Late Blight: Patte aur fruit dono par
+   Ilaj: Metalaxyl + Mancozeb spray karein
+3. Fusarium Wilt: Paudha ek taraf jhuk ke sookh jata hai
+   Ilaj: Soil drench Carbendazim se karein
+4. Tomato Mosaic Virus: Patte mottled ho jaate hain
+   Ilaj: Infected paudhe nikaalein, aphid control karein
+
+KEEDE:
+1. Fruit Borer: Fruit mein ghus jaata hai
+   Ilaj: Spinosad 45 SC - 0.3 ml per liter spray
+2. Whitefly: Chote safed keede - virus failaate hain
+   Ilaj: Imidacloprid spray karein
+3. Aphid (Maahu): Patto ke neeche chipke rehte hain
+   Ilaj: Dimethoate spray karein
+
+PAIDAWAR: 25-30 ton per hectare
+
+================================================================
+=== PYAZ (ONION) ===
+================================================================
+
+PARICHAY:
+Pyaz ek important vegetable aur commercial crop hai. India mein Maharashtra, Karnataka, Madhya Pradesh, Gujarat mein zyada hota hai.
+
+BONA KA SAMAY:
+- Kharif: June-July (Nursery May mein)
+- Late Kharif: August-September
+- Rabi: October-November (Nursery September mein)
+- Rabi pyaz sabse zyada hota hai aur storage ke liye best hai
+
+NURSERY:
+- Raised beds mein ugayein
+- Beej dar: 8-10 kg per hectare
+- Mitti mein FYM acchi tarah milayein
+- 6-8 hafte mein transplant ke liye taiyar
+
+TRANSPLANTING:
+- Row distance: 15 cm
+- Plant distance: 10 cm
+- Seedlings 15-20 cm ki honi chahiye
+- Shaam ko transplant karein
+
+KHAD:
+- FYM: 20-25 ton per hectare
+- Nitrogen: 100 kg per hectare (3 kist mein)
+- Phosphorus: 50 kg per hectare
+- Potash: 50 kg per hectare
+- Sulphur: 20 kg per hectare - quality ke liye
+
+SINCHAI:
+- Har 7-10 din mein paani dein
+- Bulb formation mein regular paani
+- Harvest se 2-3 hafte pehle paani band karein - storage better hoga
+
+UNNAT KISAMEN:
+- Agrifound Dark Red: Popular variety
+- Pusa Red: North India ke liye
+- N-2-4-1: Maharashtra ke liye
+- Arka Kalyan: IIHR Bangalore ki variety
+- Agrifound White: Export ke liye
+
+BIMARI:
+1. Purple Blotch: Patto par purple dabbe
+   Ilaj: Mancozeb ya Iprodione spray karein
+2. Stemphylium Blight: Patte tip se sookhne lagte hain
+   Ilaj: Chlorothalonil spray karein
+3. Damping Off: Nursery mein paudhe gir jaate hain
+   Ilaj: Captan se seed treatment karein
+
+STORAGE:
+- Harvest ke baad 2-3 din dhoop mein sukhayein
+- Curing karein - 7-10 din airy jagah mein
+- Proper ventilation wale store mein rakhein
+- Temperature: 25-30 degree Celsius
+- Humidity: 65-70%
+
+PAIDAWAR: 25-30 ton per hectare Rabi mein
+
+================================================================
+=== ALOO (POTATO) ===
+================================================================
+
+PARICHAY:
+Aloo Rabi season ki sabse important vegetable crop hai. Yeh October-November mein lagaya jata hai aur February-March mein nikala jata hai.
+
+BONA KA SAMAY:
+- North India: October se November
+- Hills: March se April
+- Cut tubers lagayein - har piece mein 2-3 aankhein
+- Seed dar: 20-25 quintal per hectare
+
+KHET TAIYARI:
+- Gehri jotai karein - 25-30 cm
+- Achhi tarah barik mitti karein
+- Ridge aur furrow system mein lagayein
+- Row distance: 60 cm, Plant distance: 20-25 cm
+
+KHAD:
+- FYM: 20-25 ton per hectare
+- Nitrogen: 120-150 kg per hectare (2 kist mein)
+- Phosphorus: 80 kg per hectare
+- Potash: 100-120 kg per hectare - yield quality ke liye important
+
+SINCHAI:
+- Bote ke turant baad paani dein
+- Har 8-10 din mein regular sinchai
+- Earthing up ke samay paani mat dein
+- Harvest se 10-15 din pehle band karein
+
+EARTHING UP:
+- Bote ke 30-35 din baad mitti chadhayein
+- Isse kand (tuber) dhak jaata hai - green nahi hota
+- Doosri earthing up 50-60 din baad
+
+UNNAT KISAMEN:
+- Kufri Jyoti: Popular, late blight resistant
+- Kufri Bahar: UP ke liye
+- Kufri Sindhuri: Red skin - storage ke liye
+- Kufri Chandramukhi: Early variety
+- Kufri Pukhraj: High yielding
+
+BIMARI:
+1. Late Blight: Sabse dangerous - patte aur kand dono par
+   Ilaj: Metalaxyl + Mancozeb spray karein turant
+2. Early Blight: Patto par bhoore dabbe
+   Ilaj: Mancozeb spray karein
+3. Common Scab: Kand ki outer surface par kharcha pan
+   Ilaj: pH 5.5-6.0 rakhein, zyada potash mat dein
+
+PAIDAWAR: 200-250 quintal per hectare
+
+================================================================
+=== SUGARCANE (GANNA) ===
+================================================================
+
+PARICHAY:
+Ganna ek commercial crop hai jo sugar, jaggery (gur) aur bagasse ke liye ugaya jata hai. Yeh ek saal se zyada ka crop hai.
+
+LAGANE KA SAMAY:
+- Autumn (Sharad): October se November (Best)
+- Spring (Basant): February se March
+- Summer (Grishm): April ke antim mein
+- Set distance: 60-90 cm row se row
+
+KHET TAIYARI:
+- Gehri jotai 30-35 cm
+- 2-3 baar cross jotai
+- Deep furrow banayein lagane ke liye
+
+LAGANE KA TARIKA:
+- 3 aankh (bud) wale tukde lagayein
+- Seedling method ya set method
+- Furrow mein flat ya slightly slant karke lagayein
+- Mitti se 3-4 cm dhakein
+
+KHAD:
+- FYM: 25-30 ton per hectare
+- Nitrogen: 250-300 kg per hectare (4 kist mein)
+- Phosphorus: 60-80 kg per hectare
+- Potash: 60-80 kg per hectare
+
+SINCHAI:
+- Lagane ke baad turant paani dein
+- Germination mein: Har 7 din mein
+- Growth period: Har 10-15 din mein
+- Maturity mein: 20-25 din ke antral par
+- Total: 8-10 sinchai
+
+UNNAT KISAMEN:
+- Co-0238: Sabse popular, high sucrose
+- CoJ-64: North India ke liye
+- Co-86032: Maharashtra ke liye
+- CoS-8436: UP ke liye
+- Co-0118: Early maturity
+
+BIMARI:
+1. Red Rot: Tane mein laal rang, khatta smell
+   Ilaj: Resistant variety lagayein, hot water treatment
+2. Smut (Kanda): Kaala whip nikalta hai
+   Ilaj: Infected plants nikaalein, healthy seed lagayein
+3. Wilt: Paudhe sookh jaate hain
+   Ilaj: Proper drainage, Trichoderma soil application
+
+PAIDAWAR: 70-80 ton per hectare
+
+================================================================
+=== COTTON (KAPAS) ===
+================================================================
+
+PARICHAY:
+Kapas India ki sabse important cash crop hai. Gujarat, Maharashtra, Telangana, Punjab mein zyada hoti hai. Isko "White Gold" bhi kehte hain.
+
+BONA KA SAMAY:
+- May ke antim se June tak
+- Monsoon aane ke saath bona best
+- Beej dar: 2.5-3 kg per hectare (hybrid)
+- Row distance: 90-120 cm, Plant distance: 45-60 cm
+
+MITTI:
+- Kali mitti (black cotton soil) sabse best
+- Deep, well-drained mitti
+- pH: 6.0 se 8.0
+
+KHAD:
+- FYM: 10-12 ton per hectare
+- Nitrogen: 120-150 kg per hectare (3 kist mein)
+- Phosphorus: 60 kg per hectare
+- Potash: 60 kg per hectare
+- Boron: 1 kg per hectare - boll setting ke liye
+
+SINCHAI:
+- Jab rainfall na ho tab sinchai karein
+- Critical stages: Boll formation aur boll development
+- Drip irrigation best hai cotton ke liye
+
+UNNAT KISAMEN:
+- Bt Cotton Hybrids: Bollworm resistant
+- RCH-2 Bt: Popular in Maharashtra
+- MRC-7017: Gujarat ke liye
+- NCS-855: Telangana ke liye
+- Bunny Bt: Andhra Pradesh ke liye
+
+BIMARI:
+1. Bacterial Blight (Angular Leaf Spot):
+   Ilaj: Streptomycin spray karein
+2. Alternaria Leaf Spot:
+   Ilaj: Mancozeb spray karein
+3. Fusarium Wilt:
+   Ilaj: Resistant variety, soil treatment
+
+KEEDE:
+1. Pink Bollworm: Boll ke andar keeda
+   Ilaj: Bt variety lagayein, Profenophos spray
+2. American Bollworm: Boll khaata hai
+   Ilaj: NPV spray ya Spinosad
+3. Whitefly: Virus failaata hai
+   Ilaj: Imidacloprid spray
+4. Aphid: Patto ka ras chosta hai
+   Ilaj: Dimethoate spray
+
+PAIDAWAR: 20-25 quintal (kapas) per hectare
+
+================================================================
+=== GROUNDNUT (MOONGFALI) ===
+================================================================
+
+PARICHAY:
+Moongfali ek important oilseed crop hai jo protein aur oil ke liye ugayi jati hai. Gujarat, Andhra Pradesh, Tamil Nadu, Karnataka mein zyada hoti hai.
+
+BONA KA SAMAY:
+- Kharif: June se July (Best season)
+- Rabi: November se December (South India)
+- Beej dar: 100-120 kg per hectare (shell)
+- Row distance: 30-45 cm, Plant distance: 10-15 cm
+
+MITTI:
+- Balu mitti ya domat balu mitti (Sandy loam)
+- Acchi drainage zaroori
+- pH: 6.0 se 6.5
+- Calcium rich mitti best hai
+
+KHAD:
+- FYM: 5 ton per hectare
+- Nitrogen: 20-25 kg per hectare (Rhizobium se nitrogen fix hota hai)
+- Phosphorus: 40-60 kg per hectare
+- Potash: 40-60 kg per hectare
+- Gypsum: 400-500 kg per hectare - peg penetration ke liye
+- Boron: 1 kg per hectare
+
+RHIZOBIUM INOCULATION:
+- Beej lagane se pehle Rhizobium culture se coat karein
+- Yeh nitrogen fix karta hai - khaad ki zaroorat kam hoti hai
+
+SINCHAI:
+- Bote ke baad ek paani zaroor
+- Flowering mein paani zaroori
+- Peg penetration (pegging) mein paani mat dein
+- Pod filling mein regular paani
+
+UNNAT KISAMEN:
+- TAG-24: Popular, early maturity
+- GG-20: Gujarat ke liye
+- TMV-2: Tamil Nadu ke liye
+- ICGS-11: Drought tolerant
+- Kadiri-3: Andhra Pradesh ke liye
+
+BIMARI:
+1. Tikka (Leaf Spot): Early aur late - patto par dabbe
+   Ilaj: Mancozeb ya Chlorothalonil spray
+2. Collar Rot: Tane ka galna nursery mein
+   Ilaj: Captan seed treatment, Bavistin soil drench
+3. Stem Rot (White Mold): Safed fungal growth
+   Ilaj: Carbendazim spray karein
+
+PAIDAWAR: 20-25 quintal per hectare
+
+================================================================
+=== MUSTARD (SARSON/RAPESEED) ===
+================================================================
+
+PARICHAY:
+Sarson ek important Rabi oilseed crop hai. Rajasthan, UP, Haryana, Punjab, MP mein zyada hoti hai. Mustard oil sab jagah khana pakane mein use hota hai.
+
+BONA KA SAMAY:
+- September ke antim se October tak
+- Best samay: October 15 se November 1
+- Beej dar: 5-6 kg per hectare (line mein)
+- Row distance: 30-45 cm, Plant distance: 10-15 cm
+
+MITTI:
+- Domat mitti (loamy soil)
+- pH: 6.0 se 7.5
+- Achhi drainage
+
+KHAD:
+- FYM: 10-15 ton per hectare
+- Nitrogen: 80-100 kg per hectare (2 kist mein)
+- Phosphorus: 40-50 kg per hectare
+- Potash: 40 kg per hectare
+- Sulphur: 30-40 kg per hectare (oil content badhata hai)
+- Boron: 1 kg per hectare - pod setting ke liye important
+
+SINCHAI:
+- Sarson kum paani mein bhi ho jati hai
+- 2-3 sinchai kaafi hain
+- Pehli: Bote ke 25-30 din baad
+- Doosri: Flowering mein
+- Teesri: Pod filling mein (agar ho sake)
+
+UNNAT KISAMEN:
+- Pusa Bold: Sabse popular, bold seeds
+- Pusa Mustard 25: New variety
+- RH-30: Rajasthan ke liye
+- Varuna: UP ke liye
+- NRCHB-506: Bihar ke liye
+
+BIMARI:
+1. Alternaria Blight: Patto aur pods par bhoore dabbe
+   Ilaj: Mancozeb 75 WP spray karein
+2. Sclerotinia Stem Rot: Safed mycelium tane par
+   Ilaj: Iprodione spray karein
+3. White Rust: Safed pustules patto par
+   Ilaj: Metalaxyl + Mancozeb spray
+
+APHID (MAAHU):
+- Sarson mein sabse bada keeda
+- Jab temperature 15-20 degree ho tab zyada attack
+- Ilaj: Imidacloprid 17.8 SL ya Dimethoate spray
+- Timely spray zaroori hai - yield 20-30% kam ho sakti hai
+
+PAIDAWAR: 15-20 quintal per hectare
+
+================================================================
+=== SOYBEAN ===
+================================================================
+
+PARICHAY:
+Soybean ek protein aur oil rich crop hai. Madhya Pradesh, Maharashtra, Rajasthan mein zyada hoti hai.
+
+BONA KA SAMAY:
+- Kharif: June ke antim se July
+- Monsoon aane ke saath ya baad
+- Beej dar: 65-75 kg per hectare
+- Row distance: 45 cm, Plant distance: 5-7 cm
+
+MITTI:
+- Domat kali mitti (Black loamy soil)
+- pH: 6.0 se 7.5
+
+RHIZOBIUM:
+- Bradyrhizobium japonicum culture zaroor lagayein
+- Yeh nitrogen fix karta hai - nitrogen khaad ki zaroorat 50% kam
+
+KHAD:
+- Rhizobium se nitrogen fix hota hai - extra Urea mat dein
+- Phosphorus: 60-80 kg per hectare
+- Potash: 40 kg per hectare
+- Sulphur: 20 kg per hectare
+
+UNNAT KISAMEN:
+- JS-335: Sabse popular
+- NRC-37: MP ke liye
+- MAUS-61: Maharashtra ke liye
+- Durga: High protein
+
+BIMARI:
+1. Yellow Mosaic Virus: Patte peele ho jaate hain
+   Ilaj: Whitefly control karein, resistant variety
+2. Pod Borer: Pod khaata hai
+   Ilaj: Chlorpyriphos spray karein
+
+PAIDAWAR: 20-25 quintal per hectare
+
+================================================================
+=== BAJRA (PEARL MILLET) ===
+================================================================
+
+PARICHAY:
+Bajra ek drought tolerant Kharif crop hai. Rajasthan, Gujarat, Haryana, UP mein zyada hota hai. Kum paani mein bhi ho jata hai.
+
+BONA KA SAMAY:
+- June se July (Monsoon ke saath)
+- Beej dar: 3-4 kg per hectare
+- Row distance: 45-60 cm
+
+KHAD:
+- Nitrogen: 80-100 kg per hectare
+- Phosphorus: 40 kg per hectare
+
+UNNAT KISAMEN:
+- HHB-67: Drought tolerant
+- GHB-558: Gujarat ke liye
+- Pusa Composite 443: Popular
+
+PAIDAWAR: 20-25 quintal per hectare
+
+================================================================
+=== JOWAR (SORGHUM) ===
+================================================================
+
+PARICHAY:
+Jowar Kharif season mein hota hai. Rajasthan, Maharashtra, Karnataka mein zyada. Dual purpose crop hai - food aur fodder dono.
+
+BONA KA SAMAY:
+- Kharif: June-July
+- Rabi: October-November (South India)
+- Beej dar: 10-12 kg per hectare
+
+KHAD:
+- Nitrogen: 80-100 kg per hectare
+- Phosphorus: 40 kg per hectare
+
+UNNAT KISAMEN:
+- CSV-15: Popular
+- SPV-462: High yielding
+- M-35-1: Rabi ke liye
+
+================================================================
+=== ARHAR (TUR/PIGEON PEA) ===
+================================================================
+
+PARICHAY:
+Arhar (Tur) ek important dal (pulse) crop hai. UP, MP, Maharashtra, Karnataka, Gujarat mein zyada hoti hai.
+
+BONA KA SAMAY:
+- Kharif: June-July
+- Beej dar: 15-20 kg per hectare
+- Row distance: 60-90 cm
+
+KHAD:
+- Rhizobium inoculation zaroor karein
+- Phosphorus: 60 kg per hectare
+- Potash: 20 kg per hectare
+
+UNNAT KISAMEN:
+- UPAS-120: Early variety (120 din)
+- Pusa 992: Up ke liye
+- ICPL-87: Wilt resistant
+
+PAIDAWAR: 15-20 quintal per hectare
+
+================================================================
+=== MOONG (GREEN GRAM) ===
+================================================================
+
+PARICHAY:
+Moong ek important dal (pulse) crop hai jo Kharif aur Zaid dono mein hoti hai.
+
+BONA KA SAMAY:
+- Kharif: June-July
+- Zaid (Summer): February se March
+- Beej dar: 15-20 kg per hectare
+
+KHAD:
+- Rhizobium inoculation
+- Phosphorus: 40 kg per hectare
+
+UNNAT KISAMEN:
+- Pusa Vishal: Popular
+- SML-668: Haryana ke liye
+- HUM-1: Up ke liye
+
+PAIDAWAR: 8-10 quintal per hectare
+
+================================================================
+=== CHANA (CHICKPEA) ===
+================================================================
+
+PARICHAY:
+Chana ek important Rabi dal crop hai. MP, Rajasthan, UP, Maharashtra mein zyada hoti hai.
+
+BONA KA SAMAY:
+- October se November
+- Beej dar: 60-80 kg per hectare (Desi), 80-100 kg (Kabuli)
+
+KHAD:
+- Rhizobium inoculation
+- Phosphorus: 40-60 kg per hectare
+
+UNNAT KISAMEN:
+- Pusa 362: Desi chana
+- KWR-108: Kabuli chana
+- JG-11: MP ke liye
+
+PAIDAWAR: 15-20 quintal per hectare
+
+================================================================
+=== GENERAL FARMING TIPS ===
+================================================================
+
+MITTI PARIKSHAN (SOIL TESTING):
+- Har 3 saal mein mitti test zaroor karwayein
+- Soil Health Card se free testing hoti hai
+- Test ke result ke hisaab se khaad dein
+- Isse paisa bachta hai aur yield badhti hai
+
+BEEJ UPCHAR (SEED TREATMENT):
+- Fungicide se beej treat karein - Thiram ya Captan
+- Rhizobium/PSB inoculant lagayein dal faslein mein
+- Imidacloprid se treat karein soil borne keede ke liye
+- Treatment ke baad seedbeds mein sheer sookhe
+
+INTEGRATED PEST MANAGEMENT (IPM):
+1. Fasal chakkar (Crop rotation) apnayein
+2. Resistant varieties lagayein
+3. Jaivik dawai pehle try karein
+4. Chemical spray antim upaaya ho
+5. Spray ka label dhyan se padein
+
+JAIVIK KHETI (ORGANIC FARMING):
+- FYM (gobar khad) zyada use karein
+- Vermicompost banayein - kechua khad
+- Neem khali (neem cake) use karein
+- Jeevamrit banayein: 200L paani + 10kg gobar + 10kg gomutr + 2kg chane ka atta
+- Panchgavya spray karein
+
+PAANI KI BACHAT (WATER CONSERVATION):
+- Drip irrigation lagayein - 40-50% paani bachta hai
+- Mulching karein - mitti mein nami rahti hai
+- Shaam ko paani dein - evaporation kam hoti hai
+- Rain water harvesting karein
+
+FASAL BIMA (CROP INSURANCE):
+- PM Fasal Bima Yojana mein register karein
+- Kharif: 2% premium farmer deta hai
+- Rabi: 1.5% premium
+- Natural aapda mein pura muavza milta hai
+
+MANDI MEIN BECHNA:
+- MSP (Minimum Support Price) check karein
+- APMC mandi mein bechein
+- e-NAM portal use karein online trading ke liye
+- FPO (Farmer Producer Organization) join karein - better price milta hai
+
+================================================================
+END OF FASAL TIPS DATA FILE
+Source: ICAR, Vikaspedia, IARI Research Publications
+KisanBot RAG Data - Version 1.0
+================================================================
