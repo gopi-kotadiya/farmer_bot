@@ -3,7 +3,7 @@ from src.agentic.llms.primary import llm
 from src.utils.logger import logger
 from src.agentic.tools.kisan_tools.weather import weather_tool
 from src.agentic.tools.kisan_tools.profile import profile_update_tool, profile_get_tool
-from src.agentic.tools.kisan_tools.mandi import mandi_tool
+from src.agentic.tools.kisan_tools.mandi import mandi_tool, mandi_trend_tool
 from src.agentic.tools.kisan_tools.schemes import schemes_tool
 from src.agentic.tools.kisan_tools.fasal_adviser import (
     fasal_adviser_tool,
@@ -29,6 +29,7 @@ def makeKisanBot():
             profile_update_tool, 
             profile_get_tool, 
             mandi_tool, 
+            mandi_trend_tool,
             schemes_tool,
             fasal_adviser_tool,
             pest_adviser_tool,

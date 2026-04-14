@@ -76,18 +76,99 @@ class ChatBot:
                 "Classify the request into exactly one label:\n"
                 "1) WEATHER_QUERY\n"
                 "2) MANDI_QUERY\n"
-                "3) SCHEME_QUERY\n"
-                "4) FASAL_QUERY (crop schedule: sowing, irrigation, fertilizer, harvesting)\n"
-                "5) PEST_QUERY (keeda, bimari, spray, disease treatment)\n"
-                "6) SOIL_QUERY (mitti type, pH, soil nutrients, soil health)\n"
-                "7) FARMING_TIPS_QUERY (general kheti tips, seasonal guidance, water saving, crop planning)\n"
-                "8) RECALL_QUERY (when user asks about previous messages/context like 'maine kya pucha tha', 'kis city ka', 'mera naam kya hai')\n"
-                "9) GENERAL_CHAT\n\n"
+                "3) MANDI_TREND_QUERY (price trend, prediction, next 7 days, and graph)\n"
+                "4) SCHEME_QUERY\n"
+                "5) FASAL_QUERY (crop schedule: sowing, irrigation, fertilizer, harvesting)\n"
+                "6) PEST_QUERY (keeda, bimari, spray, disease treatment)\n"
+                "7) SOIL_QUERY (mitti type, pH, soil nutrients, soil health)\n"
+                "8) FARMING_TIPS_QUERY (general kheti tips, seasonal guidance, water saving, crop planning)\n"
+                "9) RECALL_QUERY (when user asks about previous messages/context like 'maine kya pucha tha', 'kis city ka', 'mera naam kya hai')\n"
+                "10) GENERAL_CHAT\n"
+                "11) PROFILE_READ_QUERY (saved profile DB se: 'meri profile dikhao', 'profile batao', 'saved details')\n"
+                "12) PROFILE_WRITE_QUERY (naam/shehar/fasal/email save/update/register)\n\n"
                 f"Recent Session History:\n{recent_history}\n\n"
                 f"Request: '{user_input}'\n"
                 "Reply ONLY one label."
             )
             intent = self.llm.chat([{"role": "user", "content": intent_prompt}]).strip().upper()
+            ul = user_input.lower()
+            # LLM kabhi GENERAL/RECALL de deta hai — profile tools tab bhi chalenge
+            if session_id and ("GENERAL" in intent or "RECALL" in intent):
+                if "@" in user_input and any(
+                    p in ul for p in ("profile", "save", "register", "update", "dalo", "daalo", "bhejo", "likho")
+                ):
+                    intent = "PROFILE_WRITE_QUERY"
+                elif any(
+                    p in ul for p in ("meri profile", "profile dikhao", "profile dikhai", "saved profile")
+                ):
+                    intent = "PROFILE_READ_QUERY"
+            if any(p in ul for p in ("trend", "prediction", "predict", "agle 7 din", "next 7 days", "graph")) and "mandi" in ul:
+                intent = "MANDI_TREND_QUERY"
+
+            # --- PROFILE READ (real DB; /digest bhi isi row par depend karta hai) ---
+            if "PROFILE_READ" in intent:
+                prof_tool = next((t for t in self.tools if t.name == "get_farmer_profile"), None)
+                out = prof_tool.function(session_id=session_id) if prof_tool else "Profile tool missing."
+                self.save_to_db(session_id, "assistant", out)
+                return out
+
+            # --- PROFILE WRITE (SQLite me save — sirf LLM text se nahi) ---
+            if "PROFILE_WRITE" in intent:
+                upd_tool = next((t for t in self.tools if t.name == "update_farmer_profile"), None)
+                if not upd_tool:
+                    self.save_to_db(session_id, "assistant", "Profile update tool missing.")
+                    return "Profile update tool missing."
+                extract_prompt = (
+                    "Farmer ke message se sirf valid JSON do (aur kuch nahi), keys English me:\n"
+                    '{"name": null or string, "location": null or string, "crops": null or string, "email": null or string}\n'
+                    "Jo field message me clear na ho wahan JSON null use karo. Email me @ hona chahiye.\n\n"
+                    f"Message:\n{user_input!r}"
+                )
+                res_raw = self.llm.chat([{"role": "user", "content": extract_prompt}])
+                json_match = re.search(r"\{.*\}", res_raw, re.DOTALL)
+                try:
+                    data = json.loads(json_match.group()) if json_match else {}
+                except (json.JSONDecodeError, AttributeError):
+                    data = {}
+
+                def _field(key: str):
+                    v = data.get(key)
+                    if v is None or v is False:
+                        return None
+                    if isinstance(v, str) and v.strip().lower() in ("null", "none", ""):
+                        return None
+                    if isinstance(v, str):
+                        s = v.strip()
+                        return s or None
+                    return str(v).strip() or None
+
+                name, location, crops, email = (
+                    _field("name"),
+                    _field("location"),
+                    _field("crops"),
+                    _field("email"),
+                )
+                tool_res = upd_tool.function(
+                    name=name,
+                    location=location,
+                    crops=crops,
+                    email=email,
+                    session_id=session_id,
+                )
+                final_res = self.llm.chat(
+                    [
+                        {
+                            "role": "system",
+                            "content": (
+                                "Tum KisanBot ho. User ko 1-2 line Hinglish (Roman script) me confirm karo "
+                                "ki profile save/update ho gayi; important values (naam, shehar, fasal, email) short me repeat karo."
+                            ),
+                        },
+                        {"role": "user", "content": f"Tool output:\n{tool_res}"},
+                    ]
+                )
+                self.save_to_db(session_id, "assistant", final_res)
+                return final_res
 
             # --- RECALL ---
             if "RECALL" in intent:
@@ -147,6 +228,31 @@ class ChatBot:
                     return final_res
 
             # --- MANDI ---
+            if "MANDI_TREND" in intent:
+                extract_prompt = (
+                    "Extract JSON from text. Return only JSON in format: "
+                    "{\"commodity\":\"Wheat\",\"state\":\"Gujarat\",\"district\":\"Ahmedabad\",\"days_ahead\":7}. "
+                    "If missing, keep defaults (Wheat, Gujarat, null, 7). "
+                    f"Text: '{user_input}'"
+                )
+                res_raw = self.llm.chat([{"role": "user", "content": extract_prompt}])
+                json_match = re.search(r"\{.*\}", res_raw, re.DOTALL)
+                try:
+                    data = json.loads(json_match.group()) if json_match else {}
+                except (json.JSONDecodeError, AttributeError):
+                    data = {}
+                trend_tool = next((t for t in self.tools if t.name == "get_mandi_price_trend"), None)
+                if trend_tool:
+                    tool_res = trend_tool.function(
+                        commodity=data.get("commodity") or "Wheat",
+                        state=data.get("state") or "Gujarat",
+                        district=data.get("district"),
+                        days_ahead=data.get("days_ahead") or 7,
+                        session_id=session_id,
+                    )
+                    self.save_to_db(session_id, "assistant", tool_res)
+                    return tool_res
+
             if "MANDI" in intent:
                 extract_prompt = f"Extract JSON: '{user_input}'. Format: {{\"commodity\": \"Cotton\", \"state\": \"Gujarat\", \"district\": \"Rajkot\"}}."
                 res_raw = self.llm.chat([{"role": "user", "content": extract_prompt}])

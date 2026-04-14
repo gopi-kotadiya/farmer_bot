@@ -1,7 +1,9 @@
-from fastapi import APIRouter, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, Header, HTTPException, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 from typing import Optional
 from src.agentic.bots.kisan import kisan_bot
+from src.utils.daily_alert_job import run_daily_alerts_once
+from src.utils.globals import globals
 from src.utils.logger import logger
 import json
 
@@ -33,6 +35,26 @@ async def chat(body: ChatRequest):
         }
     response = await kisan_bot.chat(user_msg, session_id=sid)
     return {"status": "success", "response": response, "session_id": sid or None}
+
+
+@router.post("/admin/run-daily-alerts")
+async def admin_run_daily_alerts(x_admin_key: Optional[str] = Header(None, alias="X-Admin-Key")):
+    """
+    Manual trigger: same job as daily digest (email + `alerts` table).
+    Set ADMIN_ALERT_KEY in .env; send header X-Admin-Key: <same value>.
+    """
+    expected = (globals.admin_alert_key or "").strip()
+    if not expected:
+        raise HTTPException(
+            status_code=503,
+            detail="ADMIN_ALERT_KEY .env me set karo (phir X-Admin-Key header bhejo).",
+        )
+    if (x_admin_key or "").strip() != expected:
+        raise HTTPException(status_code=403, detail="Galat ya missing X-Admin-Key.")
+
+    summary = run_daily_alerts_once()
+    return {"status": "success", **summary}
+
 
 @router.websocket("/ws/{session_id}")
 async def websocket_endpoint(websocket: WebSocket, session_id: str):

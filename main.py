@@ -1,12 +1,24 @@
 import sys
+from contextlib import asynccontextmanager
+
 import uvicorn
 from fastapi import FastAPI
+
 from src.agentic.bots.telegram_bot import run_telegram_bot
 from src.controller.agent_ws import router as kisan_router
+from src.utils.alert_scheduler import start_alert_scheduler
+from src.utils.database import init_db
 from src.utils.logger import logger
 
-# Initialize FastAPI App
-app = FastAPI(title="Farmer Bot System")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    start_alert_scheduler()
+    yield
+
+
+app = FastAPI(title="Farmer Bot System", lifespan=lifespan)
 app.include_router(kisan_router)
 
 def run_api_server():
