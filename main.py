@@ -18,8 +18,27 @@ async def lifespan(app: FastAPI):
     yield
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(title="Farmer Bot System", lifespan=lifespan)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(kisan_router)
+
+
+@app.get("/health")
+def health():
+    """Liveness check for UI / load balancers."""
+    return {"ok": True, "service": "kisanbot-api"}
+
 
 def run_api_server():
     logger.info("🌐 API Server starting on http://localhost:8000")

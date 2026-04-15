@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-deep: #0a1f14;
+  --bg-card: rgba(18, 48, 32, 0.55);
+  --bg-elevated: rgba(255, 255, 255, 0.06);
+  --border: rgba(201, 162, 39, 0.25);
+  --accent: #c9a227;
+  --accent-soft: rgba(201, 162, 39, 0.15);
+  --text: #f5f0e6;
+  --text-muted: rgba(245, 240, 230, 0.65);
+  --success: #7cb342;
+  --danger: #e57373;
+  --radius: 14px;
+  --font: "DM Sans", system-ui, sans-serif;
+  --font-display: "Outfit", var(--font);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font);
+  background: var(--bg-deep);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}

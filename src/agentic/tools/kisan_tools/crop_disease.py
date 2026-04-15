@@ -15,7 +15,32 @@ VISION_MODEL_CANDIDATES = [
     "llama-3.2-90b-vision-preview",
 ]
 
-def detect_crop_disease(image_bytes: bytes, user_prompt: str = "", session_id: str = "") -> str:
+
+def guess_image_mime(image_bytes: bytes) -> str:
+    """Pick data: URL mime from magic bytes (JPEG/PNG/GIF/WebP/HEIC-safe fallback)."""
+    if not image_bytes or len(image_bytes) < 12:
+        return "image/jpeg"
+    if image_bytes[:3] == b"\xff\xd8\xff":
+        return "image/jpeg"
+    if image_bytes[:8] == b"\x89PNG\r\n\x1a\n":
+        return "image/png"
+    if image_bytes[:6] in (b"GIF87a", b"GIF89a"):
+        return "image/gif"
+    if image_bytes[:4] == b"RIFF" and image_bytes[8:12] == b"WEBP":
+        return "image/webp"
+    if image_bytes[4:12] == b"ftypheic" or image_bytes[4:12] == b"ftypheix":
+        return "image/heic"
+    if image_bytes[4:12] == b"ftypmif1":
+        return "image/heif"
+    return "image/jpeg"
+
+
+def detect_crop_disease(
+    image_bytes: bytes,
+    user_prompt: str = "",
+    session_id: str = "",
+    mime_type: str | None = None,
+) -> str:
     """Analyze crop issue using Groq vision model (image + prompt)."""
     if not globals.groq_api_key:
         return "GROQ_API_KEY missing hai. .env me GROQ_API_KEY add karo."
@@ -40,10 +65,13 @@ def detect_crop_disease(image_bytes: bytes, user_prompt: str = "", session_id: s
             f"Farmer symptoms/caption: {user_prompt.strip() or 'No caption provided'}"
         )
 
+        mime = (mime_type or "").strip() if mime_type else ""
+        if not mime or not mime.startswith("image/"):
+            mime = guess_image_mime(image_bytes)
         image_b64 = base64.b64encode(image_bytes).decode("utf-8")
         message_content = [
             {"type": "text", "text": prompt},
-            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:{mime};base64,{image_b64}"}},
         ]
 
         errors = []

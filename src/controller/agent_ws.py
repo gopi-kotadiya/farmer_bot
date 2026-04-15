@@ -1,11 +1,14 @@
-from fastapi import APIRouter, Header, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, File, Form, Header, HTTPException, UploadFile, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 from typing import Optional
+
+import json
+
 from src.agentic.bots.kisan import kisan_bot
+from src.agentic.tools.kisan_tools.crop_disease import detect_crop_disease, guess_image_mime
 from src.utils.daily_alert_job import run_daily_alerts_once
 from src.utils.globals import globals
 from src.utils.logger import logger
-import json
 
 router = APIRouter(prefix="/v1/kisan")
 
@@ -30,11 +33,51 @@ async def chat(body: ChatRequest):
     if not user_msg:
         return {
             "status": "error",
-            "response": "Kuch likho: JSON me `message` ya `text` field use karo. Example: {\"text\":\"hello\"}",
+            "response": "Send JSON with `message` or `text`. Example: {\"message\":\"hello\"}",
             "session_id": sid or None,
         }
-    response = await kisan_bot.chat(user_msg, session_id=sid)
-    return {"status": "success", "response": response, "session_id": sid or None}
+    try:
+        logger.user_message(user_msg, session_id=sid)
+        response = await kisan_bot.chat(user_msg, session_id=sid)
+        text = response if isinstance(response, str) else str(response)
+        logger.assistant_message(text, session_id=sid)
+        return {"status": "success", "response": text, "session_id": sid or None}
+    except Exception as e:
+        logger.exception("POST /chat failed")
+        return {
+            "status": "error",
+            "response": f"Server error: {e!s}",
+            "session_id": sid or None,
+        }
+
+
+@router.post("/crop-disease")
+async def crop_disease_analyze(
+    image: UploadFile = File(..., description="Crop photo (JPEG, PNG, WebP, etc.)"),
+    caption: Optional[str] = Form(None),
+    session_id: Optional[str] = Form(None),
+):
+    """
+    Image upload → Groq vision (`detect_crop_disease`).
+    Any common image type; MIME taken from file + magic-byte fallback.
+    """
+    sid = (session_id or "").strip()
+    raw = await image.read()
+    if not raw:
+        return {"status": "error", "response": "Koi image data nahi mila.", "session_id": sid or None}
+
+    declared = (image.content_type or "").strip().lower()
+    mime = declared if declared.startswith("image/") else guess_image_mime(raw)
+
+    try:
+        text = detect_crop_disease(
+            raw, user_prompt=caption or "", session_id=sid, mime_type=mime
+        )
+    except Exception as e:
+        logger.error(f"crop-disease endpoint: {e}", session_id=sid)
+        return {"status": "error", "response": str(e), "session_id": sid or None}
+
+    return {"status": "success", "response": text, "session_id": sid or None}
 
 
 @router.post("/admin/run-daily-alerts")
@@ -83,11 +126,11 @@ async def websocket_endpoint(websocket: WebSocket, session_id: str):
                     "session_id": session_id
                 }))
                 continue
-            print(f"{USER_COLOR}[USER] {session_id} User Message: {user_msg}{RESET_COLOR}", flush=True)
+            logger.user_message(user_msg, session_id=session_id)
             
             # Get response from AI
             response = await kisan_bot.chat(user_msg, session_id=session_id)
-            print(f"{ASSISTANT_COLOR}[ASSISTANT] {session_id} Assistant: {response}{RESET_COLOR}", flush=True)
+            logger.assistant_message(response, session_id=session_id)
             
             # Send response back
             await websocket.send_text(json.dumps({
